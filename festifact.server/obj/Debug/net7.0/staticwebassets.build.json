@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ZK1jtAQFY99mpJEaFHUFYpv5pmOxUB1L7JAEToW0U1Y=",
+  "Source": "festifact.server",
+  "BasePath": "_content/festifact.server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
