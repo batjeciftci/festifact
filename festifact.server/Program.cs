@@ -1,4 +1,6 @@
-﻿
+﻿using festifact.server.Database;
+using Microsoft.EntityFrameworkCore;
+
 namespace festifact.server;
 
 public class Program
@@ -8,6 +10,8 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
+        var connectionString = builder.Configuration.GetConnectionString("sqlconnection");
+        builder.Services.AddDbContext<FestiFactDbContext>(options => options.UseSqlServer(connectionString));
 
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
