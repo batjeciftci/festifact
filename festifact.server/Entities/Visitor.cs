@@ -13,7 +13,7 @@ public class Visitor
     [Required(ErrorMessage = "Lastname is required!")]
     public string? Lastname { get; set; }
 
-    public DateOnly DateOfBirth { get; set; }
+    public DateTime DateOfBirth { get; set; }
 
     public string? Sex { get; set; }
 
