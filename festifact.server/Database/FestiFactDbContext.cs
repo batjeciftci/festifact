@@ -104,8 +104,8 @@ public class FestiFactDbContext : DbContext
             Title = "main stage madness",
             Description = "Get ready for an explosive showcase of music as top artists take the main stage by storm. Experience an unforgettable night filled with electrifying performances and high-energy entertainment.",
             ImageUrl = "/Images/Shows/mFestivalShow1.png",
-            StartTime = new TimeOnly(13, 30),
-            EndTime = new TimeOnly(15, 00),
+            StartTime = new DateTime(2023, 7, 5, 18, 00, 00),
+            EndTime = new DateTime(2023, 7, 5, 19, 30, 00),
             ArtistId = 2,
             FilmId = 0
         });
@@ -116,8 +116,8 @@ public class FestiFactDbContext : DbContext
             Title = "acoustic bliss",
             Description = "Immerse yourself in the soothing melodies of acoustic music. Sit back, relax, and let the enchanting sounds of talented singer-songwriters create an atmosphere of pure bliss and heartfelt emotions.",
             ImageUrl = "/Images/Shows/mFestivalShow2.png",
-            StartTime = new TimeOnly(13, 00),
-            EndTime = new TimeOnly(15, 30),
+            StartTime = new DateTime(2023, 6, 2, 14, 00, 00),
+            EndTime = new DateTime(2023, 6, 2, 15, 30, 00),
             ArtistId = 1,
             FilmId = 0
         });
@@ -128,8 +128,8 @@ public class FestiFactDbContext : DbContext
             Title = "rock revolution",
             Description = "Unleash your inner rock enthusiast and witness the raw power of live rock music.",
             ImageUrl = "/Images/Shows/mFestivalShow3.png",
-            StartTime = new TimeOnly(12, 00),
-            EndTime = new TimeOnly(16, 30),
+            StartTime = new DateTime(2023, 6, 15, 16, 30, 00),
+            EndTime = new DateTime(2023, 6, 15, 18, 30, 00),
             ArtistId = 3,
             FilmId = 0
         });
@@ -140,8 +140,8 @@ public class FestiFactDbContext : DbContext
             Title = "opening night spectacular",
             Description = "Join us for a glamorous evening as we kick off the film festival in style.",
             ImageUrl = "/Images/Shows/fFestivalShow1.png",
-            StartTime = new TimeOnly(20, 00),
-            EndTime = new TimeOnly(22, 00),
+            StartTime = new DateTime(2023, 7, 19, 20, 00, 00),
+            EndTime = new DateTime(2023, 7, 19, 21, 30, 00),
             ArtistId = 0,
             FilmId = 3
         });
@@ -152,8 +152,8 @@ public class FestiFactDbContext : DbContext
             Title = "classic cinema showcase",
             Description = "Step back in time and relish the golden era of cinema with a showcase of timeless classics.",
             ImageUrl = "/Images/Shows/fFestivalShow2.png",
-            StartTime = new TimeOnly(19, 30),
-            EndTime = new TimeOnly(21, 30),
+            StartTime = new DateTime(2023, 6, 10, 19, 30, 00),
+            EndTime = new DateTime(2023, 6, 10, 21, 30, 00),
             ArtistId = 0,
             FilmId = 2
         });
@@ -164,8 +164,8 @@ public class FestiFactDbContext : DbContext
             Title = "indie gems gala",
             Description = "Celebrate the creativity and innovation of independent filmmaking with a showcase of captivating indie gems.",
             ImageUrl = "/Images/Shows/fFestivalShow3.png",
-            StartTime = new TimeOnly(18, 00),
-            EndTime = new TimeOnly(22, 30),
+            StartTime = new DateTime(2023, 8, 25, 14, 30, 00),
+            EndTime = new DateTime(2023, 8, 25, 16, 30, 00),
             ArtistId = 0,
             FilmId = 1
         });
@@ -176,8 +176,8 @@ public class FestiFactDbContext : DbContext
             Title = "dance extravaganza",
             Description = "Immerse yourself in a dazzling display of dance styles and mesmerizing choreography.",
             ImageUrl = "/Images/Shows/dFestivalShow1.png",
-            StartTime = new TimeOnly(15, 00),
-            EndTime = new TimeOnly(19, 30),
+            StartTime = new DateTime(2023, 9, 3, 16, 30, 00),
+            EndTime = new DateTime(2023, 9, 3, 18, 00, 00),
             ArtistId = 4,
             FilmId = 0
         });
@@ -188,8 +188,8 @@ public class FestiFactDbContext : DbContext
             Title = "street dance showdown",
             Description = "Witness the raw energy and fierce competition of street dance as crews battle it out in an electrifying showdown.",
             ImageUrl = "/Images/Shows/dFestivalShow2.png",
-            StartTime = new TimeOnly(12, 00),
-            EndTime = new TimeOnly(16, 00),
+            StartTime = new DateTime(2023, 11, 7, 15, 00, 00),
+            EndTime = new DateTime(2023, 11, 7, 17, 00, 00),
             ArtistId = 5,
             FilmId = 0
         });
@@ -200,8 +200,8 @@ public class FestiFactDbContext : DbContext
             Title = "author spotlight",
             Description = "Step into the world of renowned authors as they take the stage to share insights into their works. Engage in fascinating discussions, hear captivating readings, and get a glimpse into the creative minds behind some of the most celebrated literary works.",
             ImageUrl = "/Images/Shows/lFestivalShow1.png",
-            StartTime = new TimeOnly(10, 30),
-            EndTime = new TimeOnly(13, 00),
+            StartTime = new DateTime(2023, 12, 20, 15, 00, 00),
+            EndTime = new DateTime(2023, 12, 20, 17, 00, 00),
             ArtistId = 0,
             FilmId = 0
         });
@@ -212,8 +212,8 @@ public class FestiFactDbContext : DbContext
             Title = "book club live",
             Description = "Join a vibrant book club discussion brought to life on stage.",
             ImageUrl = "/Images/Shows/lFestivalShow2.png",
-            StartTime = new TimeOnly(11, 00),
-            EndTime = new TimeOnly(14, 30),
+            StartTime = new DateTime(2023, 11, 8, 17, 30, 00),
+            EndTime = new DateTime(2023, 11, 8, 19, 30, 00),
             ArtistId = 0,
             FilmId = 0
         });
