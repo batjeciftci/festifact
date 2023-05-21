@@ -14,7 +14,7 @@ public class Festival
 	public string? Description { get; set; }
 
 	[Required(ErrorMessage = "Date is required!")]
-	public DateOnly Date { get; set; }
+	public DateTime Date { get; set; }
 
 	[Required]
 	public string? BannerImageUrl { get; set; }
