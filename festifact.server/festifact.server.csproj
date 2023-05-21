@@ -26,8 +26,10 @@
 
   <ItemGroup>
     <None Remove="Database\" />
+    <None Remove="Entities\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Database\" />
+    <Folder Include="Entities\" />
   </ItemGroup>
 </Project>

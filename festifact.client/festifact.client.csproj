@@ -55,4 +55,72 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="Resources\Images\Shows\" />
+	  <None Remove="Resources\Images\Shows\mFestivalShow1.png" />
+	  <None Remove="Resources\Images\Shows\mFestivalShow2.png" />
+	  <None Remove="Resources\Images\Shows\mFestivalShow3.png" />
+	  <None Remove="Resources\Images\Shows\fFestivalShow1.png" />
+	  <None Remove="Resources\Images\Shows\fFestivalShow2.png" />
+	  <None Remove="Resources\Images\Shows\fFestivalShow3.png" />
+	  <None Remove="Resources\Images\Shows\dFestivalShow1.png" />
+	  <None Remove="Resources\Images\Shows\dFestivalShow2.png" />
+	  <None Remove="Resources\Images\Shows\lFestivalShow1.png" />
+	  <None Remove="Resources\Images\Shows\lFestivalShow2.png" />
+	  <None Remove="Resources\Images\Music\" />
+	  <None Remove="Resources\Images\Music\mFestival1.png" />
+	  <None Remove="Resources\Images\Music\mFestival2.png" />
+	  <None Remove="Resources\Images\Music\mFestival3.png" />
+	  <None Remove="Resources\Images\Music\mFestival4.png" />
+	  <None Remove="Resources\Images\Film\" />
+	  <None Remove="Resources\Images\Dance\" />
+	  <None Remove="Resources\Images\Literature\" />
+	  <None Remove="Resources\Images\Film\fFestival1.png" />
+	  <None Remove="Resources\Images\Film\fFestival2.png" />
+	  <None Remove="Resources\Images\Film\fFestival3.png" />
+	  <None Remove="Resources\Images\Film\fFestival4.png" />
+	  <None Remove="Resources\Images\Dance\dFestival1.png" />
+	  <None Remove="Resources\Images\Dance\dFestival2.png" />
+	  <None Remove="Resources\Images\Dance\dFestival3.png" />
+	  <None Remove="Resources\Images\Dance\dFestival4.png" />
+	  <None Remove="Resources\Images\Literature\lFestival1.png" />
+	  <None Remove="Resources\Images\Literature\lFestival2.png" />
+	  <None Remove="Resources\Images\Literature\lFestival3.png" />
+	  <None Remove="Resources\Images\Literature\lFestival4.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Images\Shows\mFestivalShow1.png" />
+	  <BundleResource Include="Resources\Images\Shows\mFestivalShow2.png" />
+	  <BundleResource Include="Resources\Images\Shows\mFestivalShow3.png" />
+	  <BundleResource Include="Resources\Images\Shows\fFestivalShow1.png" />
+	  <BundleResource Include="Resources\Images\Shows\fFestivalShow2.png" />
+	  <BundleResource Include="Resources\Images\Shows\fFestivalShow3.png" />
+	  <BundleResource Include="Resources\Images\Shows\dFestivalShow1.png" />
+	  <BundleResource Include="Resources\Images\Shows\dFestivalShow2.png" />
+	  <BundleResource Include="Resources\Images\Shows\lFestivalShow1.png" />
+	  <BundleResource Include="Resources\Images\Shows\lFestivalShow2.png" />
+	  <BundleResource Include="Resources\Images\Music\mFestival1.png" />
+	  <BundleResource Include="Resources\Images\Music\mFestival2.png" />
+	  <BundleResource Include="Resources\Images\Music\mFestival3.png" />
+	  <BundleResource Include="Resources\Images\Music\mFestival4.png" />
+	  <BundleResource Include="Resources\Images\Film\fFestival1.png" />
+	  <BundleResource Include="Resources\Images\Film\fFestival2.png" />
+	  <BundleResource Include="Resources\Images\Film\fFestival3.png" />
+	  <BundleResource Include="Resources\Images\Film\fFestival4.png" />
+	  <BundleResource Include="Resources\Images\Dance\dFestival1.png" />
+	  <BundleResource Include="Resources\Images\Dance\dFestival2.png" />
+	  <BundleResource Include="Resources\Images\Dance\dFestival3.png" />
+	  <BundleResource Include="Resources\Images\Dance\dFestival4.png" />
+	  <BundleResource Include="Resources\Images\Literature\lFestival1.png" />
+	  <BundleResource Include="Resources\Images\Literature\lFestival2.png" />
+	  <BundleResource Include="Resources\Images\Literature\lFestival3.png" />
+	  <BundleResource Include="Resources\Images\Literature\lFestival4.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Resources\Images\Shows\" />
+	  <Folder Include="Resources\Images\Music\" />
+	  <Folder Include="Resources\Images\Film\" />
+	  <Folder Include="Resources\Images\Dance\" />
+	  <Folder Include="Resources\Images\Literature\" />
+	</ItemGroup>
 </Project>
