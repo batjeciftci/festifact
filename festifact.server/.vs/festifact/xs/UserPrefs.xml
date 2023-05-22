@@ -1,33 +1,32 @@
 ﻿<Properties StartupConfiguration="{6E7570F3-3775-48EC-AE4D-C3EC2136292D}|https">
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.46" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Database/FestiFactDbContext.cs">
+  <MonoDevelop.Ide.ItemProperties.festifact.models FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.festifact.client PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.ItemProperties.festifact.server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.festifact.tests FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Entities/CartItem.cs">
     <Files>
-      <File FileName="Database/FestiFactDbContext.cs" Line="104" Column="1" />
+      <File FileName="Entities/CartItem.cs" Line="19" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="festifact" expanded="True">
             <Node name="festifact.server" expanded="True">
-              <Node name="Database" expanded="True">
-                <Node name="FestiFactDbContext.cs" selected="True" />
+              <Node name="Entities" expanded="True">
+                <Node name="CartItem.cs" selected="True" />
               </Node>
-              <Node name="Entities" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.festifact.tests FirstBuild="True" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.festifact.client PreferredExecutionTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.festifact.server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.festifact.models FirstBuild="True" />
   <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.46" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
