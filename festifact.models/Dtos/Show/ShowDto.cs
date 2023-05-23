@@ -1,7 +1,6 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 
-namespace festifact.models.Dtos;
+namespace festifact.models.Dtos.Show;
 
 public class ShowDto
 {

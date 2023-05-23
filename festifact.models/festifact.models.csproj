@@ -8,16 +8,16 @@
 
   <ItemGroup>
     <None Remove="Dtos\" />
-    <None Remove="Dtos\Visitor\" />
     <None Remove="Dtos\Festival\" />
     <None Remove="Dtos\CartItem\" />
     <None Remove="Dtos\Show\" />
+    <None Remove="Dtos\Visitor\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dtos\" />
-    <Folder Include="Dtos\Visitor\" />
     <Folder Include="Dtos\Festival\" />
     <Folder Include="Dtos\CartItem\" />
     <Folder Include="Dtos\Show\" />
+    <Folder Include="Dtos\Visitor\" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System;
 using festifact.server.Entities;
-using festifact.models.Dtos;
+using festifact.models.Dtos.CartItem;
 
 namespace festifact.server.Repositories.Contracts;
 

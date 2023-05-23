@@ -1,7 +1,6 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 
-namespace festifact.models.Dtos;
+namespace festifact.models.Dtos.Festival;
 
 public class FestivalToAddDto
 {
@@ -31,3 +30,4 @@ public class FestivalToAddDto
 
     public int FestivalCategoryId { get; set; }
 }
+

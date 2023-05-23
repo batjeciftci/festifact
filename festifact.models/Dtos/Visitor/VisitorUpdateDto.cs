@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace festifact.models.Dtos;
+namespace festifact.models.Dtos.Visitor;
 
 public class VisitorUpdateDto
 {

@@ -1,5 +1,4 @@
 ﻿using System;
-using festifact.models.Dtos;
 using festifact.models.Dtos.Show;
 using festifact.server.Database;
 using festifact.server.Entities;

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace festifact.models.Dtos;
+namespace festifact.models.Dtos.CartItem;
 
 public class CartItemToAddDto
 {
@@ -14,5 +14,4 @@ public class CartItemToAddDto
 
     public int ShoppingCartId { get; set; }
 }
-
 

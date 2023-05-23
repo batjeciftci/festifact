@@ -1,5 +1,5 @@
 ﻿using System;
-using festifact.models.Dtos;
+using festifact.models.Dtos.Visitor;
 using festifact.server.Entities;
 
 namespace festifact.server.Repositories.Contracts;

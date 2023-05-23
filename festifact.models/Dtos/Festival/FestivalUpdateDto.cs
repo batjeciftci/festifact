@@ -1,7 +1,6 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 
-namespace festifact.models.Dtos;
+namespace festifact.models.Dtos.Festival;
 
 public class FestivalUpdateDto
 {
@@ -11,5 +10,4 @@ public class FestivalUpdateDto
 
     public string? Location { get; set; }
 }
-
 
