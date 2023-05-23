@@ -29,12 +29,16 @@
     <None Remove="Entities\" />
     <None Remove="Repositories\" />
     <None Remove="Repositories\Contracts\" />
+    <None Remove="Services\" />
+    <None Remove="Services\Contracts\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Database\" />
     <Folder Include="Entities\" />
     <Folder Include="Repositories\" />
     <Folder Include="Repositories\Contracts\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Contracts\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\festifact.models\festifact.models.csproj">
