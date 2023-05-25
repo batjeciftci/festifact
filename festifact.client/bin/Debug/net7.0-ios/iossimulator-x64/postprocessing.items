@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="festifact.client.app/festifact.client">
+      <BCSymbolMapName>festifact.client.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>festifact.client.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/huseyin/festifact/festifact.client/obj/Debug/net7.0-ios/iossimulator-x64/mtouch-symbols.list</SymbolFile>
+      <DSymName>festifact.client.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/huseyin/festifact/festifact.client</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>
