@@ -1,0 +1,12 @@
+/Users/huseyin/festifact/festifact.models/bin/Debug/net7.0/festifact.models.deps.json
+/Users/huseyin/festifact/festifact.models/bin/Debug/net7.0/festifact.models.dll
+/Users/huseyin/festifact/festifact.models/bin/Debug/net7.0/festifact.models.pdb
+/Users/huseyin/festifact/festifact.models/obj/Debug/net7.0/festifact.models.csproj.AssemblyReference.cache
+/Users/huseyin/festifact/festifact.models/obj/Debug/net7.0/festifact.models.GeneratedMSBuildEditorConfig.editorconfig
+/Users/huseyin/festifact/festifact.models/obj/Debug/net7.0/festifact.models.AssemblyInfoInputs.cache
+/Users/huseyin/festifact/festifact.models/obj/Debug/net7.0/festifact.models.AssemblyInfo.cs
+/Users/huseyin/festifact/festifact.models/obj/Debug/net7.0/festifact.models.csproj.CoreCompileInputs.cache
+/Users/huseyin/festifact/festifact.models/obj/Debug/net7.0/festifact.models.dll
+/Users/huseyin/festifact/festifact.models/obj/Debug/net7.0/refint/festifact.models.dll
+/Users/huseyin/festifact/festifact.models/obj/Debug/net7.0/festifact.models.pdb
+/Users/huseyin/festifact/festifact.models/obj/Debug/net7.0/ref/festifact.models.dll

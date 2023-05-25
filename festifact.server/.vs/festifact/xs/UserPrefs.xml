@@ -1,13 +1,40 @@
-﻿<Properties StartupConfiguration="{6E7570F3-3775-48EC-AE4D-C3EC2136292D}|https">
-  <MonoDevelop.Ide.Workbench>
+
+﻿<Properties StartupConfiguration="{6E7570F3-3775-48EC-AE4D-C3EC2136292D}|http">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.festifact.server PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Repositories/FestivalRepository.cs">
+    <Files>
+      <File FileName="Repositories/FestivalRepository.cs" Line="106" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="festifact" expanded="True" />
+          <Node name="festifact" expanded="True">
+            <Node name="festifact.models" expanded="True">
+              <Node name="Dtos" expanded="True">
+                <Node name="Festival" expanded="True" />
+                <Node name="Show" expanded="True" />
+                <Node name="Visitor" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="festifact.server" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Database" expanded="True" />
+              <Node name="Entities" expanded="True" />
+              <Node name="Helpers" expanded="True" />
+              <Node name="Repositories" expanded="True">
+                <Node name="Contracts" expanded="True" />
+                <Node name="FestivalRepository.cs" selected="True" />
+              </Node>
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+>>>>>>> origin/main
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+<<<<<<< HEAD
   <MonoDevelop.Ide.ItemProperties.festifact.server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
@@ -15,7 +42,17 @@
   <MonoDevelop.Ide.ItemProperties.festifact.client PreferredExecutionTarget="Android.pixel_5_-_api_33" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+=======
+>>>>>>> origin/main
   <MultiItemStartupConfigurations />
   <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.festifact.client PreferredExecutionTarget="Android.pixel_5_-_api_33" />
   <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.46" />
+<<<<<<< HEAD
+=======
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+>>>>>>> origin/main
 </Properties>

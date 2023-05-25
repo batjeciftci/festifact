@@ -3767,6 +3767,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "festifact.models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/festifact.models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/festifact.models.dll": {}
+        }
       }
     }
   },
@@ -11055,6 +11065,11 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "festifact.models/1.0.0": {
+      "type": "project",
+      "path": "../festifact.models/festifact.models.csproj",
+      "msbuildProject": "../festifact.models/festifact.models.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -11065,7 +11080,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.6",
-      "Swashbuckle.AspNetCore >= 6.5.0"
+      "Swashbuckle.AspNetCore >= 6.5.0",
+      "festifact.models >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -11094,7 +11110,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/huseyin/festifact/festifact.models/festifact.models.csproj": {
+              "projectPath": "/Users/huseyin/festifact/festifact.models/festifact.models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

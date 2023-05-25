@@ -6,4 +6,22 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Dtos\" />
+    <None Remove="Dtos\Festival\" />
+    <None Remove="Dtos\CartItem\" />
+    <None Remove="Dtos\Show\" />
+    <None Remove="Dtos\Visitor\" />
+    <None Remove="Dtos\Film\" />
+    <None Remove="Dtos\Artist\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dtos\" />
+    <Folder Include="Dtos\Festival\" />
+    <Folder Include="Dtos\CartItem\" />
+    <Folder Include="Dtos\Show\" />
+    <Folder Include="Dtos\Visitor\" />
+    <Folder Include="Dtos\Film\" />
+    <Folder Include="Dtos\Artist\" />
+  </ItemGroup>
 </Project>
