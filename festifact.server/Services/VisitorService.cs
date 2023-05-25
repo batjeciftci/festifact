@@ -27,16 +27,19 @@ public class VisitorService : IVisitorService
         return visitor;
     }
 
+    // Add Business Logic Here!
     public async Task AddVisitor(VisitorToAddDto visitorToAddDto)
     {
         await _repository.Add(visitorToAddDto);
     }
 
+    // Add Business Logic Here!
     public async Task UpdateVisitor(int id, VisitorUpdateDto visitorUpdateDto)
     {
         await _repository.Update(id, visitorUpdateDto);
     }
 
+    // Add Business Logic Here!
     public async Task DeleteVisitor(int id)
     {
         await _repository.Delete(id);

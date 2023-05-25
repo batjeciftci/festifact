@@ -28,28 +28,22 @@ public class ShowRepository : IShowRepository
         return show;
     }
 
-    public async Task<Show> Add(ShowDto showDto)
+    public async Task<Show> Add(ShowToAddDto showToAddDto)
     {
-        var show = await (from aShow in _dbContext.Shows
-                          where aShow.ShowId == showDto.ShowId
-                          select new Show
-                          {
-                              Title = showDto.Title,
-                              Description = showDto.Description,
-                              ImageUrl = showDto.ImageUrl,
-                              StartTime = showDto.StartTime,
-                              EndTime = showDto.EndTime,
-                              ArtistId = showDto.ArtistId,
-                              FilmId = showDto.FilmId
-                          }).SingleOrDefaultAsync();
-
-        if (show is not null)
+        var show = new Show
         {
-            var result = await _dbContext.Shows.AddAsync(show);
-            await _dbContext.SaveChangesAsync();
-            return result.Entity;
-        }
-        return null;
+            Title = showToAddDto.Title,
+            Description = showToAddDto.Description,
+            ImageUrl = showToAddDto.ImageUrl,
+            StartTime = showToAddDto.StartTime,
+            EndTime = showToAddDto.EndTime,
+            ArtistId = showToAddDto.ArtistId,
+            FilmId = showToAddDto.FilmId
+        };
+
+        var result = await _dbContext.AddAsync(show);
+        await _dbContext.SaveChangesAsync();
+        return result.Entity;
     }
 
     public async Task<Show> Update(int id, ShowUpdateDto showUpdateDto)
@@ -61,10 +55,11 @@ public class ShowRepository : IShowRepository
             show.StartTime = showUpdateDto.StartTime;
             show.EndTime = showUpdateDto.EndTime;
 
+            var result = _dbContext.Update(show);
             await _dbContext.SaveChangesAsync();
-            return show;
+            return result.Entity;
         }
-        return null;
+        return default(Show);
     }
 
     public async Task<Show> Delete(int id)
@@ -77,6 +72,6 @@ public class ShowRepository : IShowRepository
             await _dbContext.SaveChangesAsync();
             return show;
         }
-        return null;
+        return default(Show);
     }
 }

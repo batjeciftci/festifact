@@ -28,9 +28,9 @@ public class ShowService : IShowService
     }
 
     // Add Business Logic Here!
-    public async Task<Show> AddShow(ShowDto showDto)
+    public async Task<Show> AddShow(ShowToAddDto showToAddDto)
     {
-        var show = await _repository.Add(showDto);
+        var show = await _repository.Add(showToAddDto);
         return show;
     }
 

@@ -59,11 +59,5 @@ public class FestivalService : IFestivalService
         var festivalCategories = await _repository.GetFestivalCategories();
         return festivalCategories;
     }
-
-    public async Task<FestivalCategory> GetFestivalCategory(int id)
-    {
-        var festivalCategory = await _repository.GetFestivalCategory(id);
-        return festivalCategory;
-    }
 }
 

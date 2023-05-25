@@ -31,6 +31,7 @@
     <None Remove="Repositories\Contracts\" />
     <None Remove="Services\" />
     <None Remove="Services\Contracts\" />
+    <None Remove="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Database\" />
@@ -39,6 +40,7 @@
     <Folder Include="Repositories\Contracts\" />
     <Folder Include="Services\" />
     <Folder Include="Services\Contracts\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\festifact.models\festifact.models.csproj">

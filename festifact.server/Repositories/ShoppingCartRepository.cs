@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using festifact.models.Dtos.CartItem;
 using festifact.server.Database;
 using festifact.server.Entities;
@@ -41,23 +42,17 @@ public class ShoppingCartRepository : IShoppingCartRepository
 
     public async Task<CartItem> AddItem(CartItemToAddDto cartItemToAddDto)
     {
-        var cartItem = await (from aCartItem in _dbContext.CartItems
-                              where aCartItem.CartItemId == cartItemToAddDto.CartItemId
-                              select new CartItem
-                              {
-                                  NumberOfTickets = cartItemToAddDto.NumberOfTickets,
-                                  TotalAmount = cartItemToAddDto.TotalAmount,
-                                  FestivalId = cartItemToAddDto.FestivalId,
-                                  ShoppingCartId = cartItemToAddDto.ShoppingCartId
-                              }).SingleOrDefaultAsync();
-
-        if (cartItem is not null)
+        var cartItem = new CartItem
         {
-            var result = await _dbContext.CartItems.AddAsync(cartItem);
-            await _dbContext.SaveChangesAsync();
-            return result.Entity;
-        }
-        return null;
+            NumberOfTickets = cartItemToAddDto.NumberOfTickets,
+            TotalAmount = cartItemToAddDto.TotalAmount,
+            FestivalId = cartItemToAddDto.FestivalId,
+            ShoppingCartId = cartItemToAddDto.ShoppingCartId
+        };
+
+        var result = await _dbContext.CartItems.AddAsync(cartItem);
+        await _dbContext.SaveChangesAsync();
+        return result.Entity;
     }
 
     public async Task<CartItem> UpdateItem(int id, CartItemNumberOfTicketsUpdateDto cartItemNumberOfTicketsUpdateDto)
@@ -67,8 +62,10 @@ public class ShoppingCartRepository : IShoppingCartRepository
         if (cartItem != null)
         {
             cartItem.NumberOfTickets = cartItemNumberOfTicketsUpdateDto.NumberOfTickets;
+
+            var result = _dbContext.CartItems.Update(cartItem);
             await _dbContext.SaveChangesAsync();
-            return cartItem;
+            return result.Entity;
         }
         return null;
     }
@@ -79,19 +76,19 @@ public class ShoppingCartRepository : IShoppingCartRepository
 
         if (cartItem is not null)
         {
-            _dbContext.CartItems.Remove(cartItem);
+            var result = _dbContext.CartItems.Remove(cartItem);
             await _dbContext.SaveChangesAsync();
-            return cartItem;
+            return result.Entity;
         }
         return null;
     }
 
     public async Task<IEnumerable<CartItem>> DeleteItems(int visitorId)
     {
-        var query = await (from sCart in _dbContext.ShoppingCarts
+        var query = await (from shoppingCart in _dbContext.ShoppingCarts
                            join cartItem in _dbContext.CartItems
-                           on sCart.ShoppingCartId equals cartItem.ShoppingCartId
-                           where sCart.VisitorId == visitorId
+                           on shoppingCart.ShoppingCartId equals cartItem.ShoppingCartId
+                           where shoppingCart.VisitorId == visitorId
                            select cartItem).ToListAsync();
 
         if (query.Any())
@@ -100,6 +97,7 @@ public class ShoppingCartRepository : IShoppingCartRepository
             await _dbContext.SaveChangesAsync();
             return query;
         }
+        Debug.WriteLine($"CartItems of visitor with id:{visitorId} could not be deleted!");
         return null;
     }
 }

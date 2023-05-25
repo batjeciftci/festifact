@@ -10,7 +10,7 @@ public interface IShowService
 
     Task<Show> GetShow(int id);
 
-    Task<Show> AddShow(ShowDto showDto);
+    Task<Show> AddShow(ShowToAddDto showToAddDto);
 
     Task<Show> UpdateShow(int id, ShowUpdateDto showUpdateDto);
 

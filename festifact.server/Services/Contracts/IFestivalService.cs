@@ -19,7 +19,5 @@ public interface IFestivalService
     Task<Festival> DeleteFestival(int id);
 
     Task<IEnumerable<FestivalCategory>> GetFestivalCategories();
-
-    Task<FestivalCategory> GetFestivalCategory(int id);
 }
 

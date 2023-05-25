@@ -43,31 +43,26 @@ public class FestivalRepository : IFestivalRepository
 
     public async Task<Festival> Add(FestivalToAddDto festivalToAddDto)
     {
-        var query = await (from festival in _dbContext.Festivals
-                           where festival.FestivalId == festivalToAddDto.FestivalId
-                           select new Festival
-                           {
-                               Title = festivalToAddDto.Title,
-                               Description = festivalToAddDto.Description,
-                               Date = festivalToAddDto.Date,
-                               BannerImageUrl = festivalToAddDto.BannerImageUrl,
-                               Genre = festivalToAddDto.Genre,
-                               Age = festivalToAddDto.Age,
-                               NumberOfDays = festivalToAddDto.NumberOfDays,
-                               Location = festivalToAddDto.Location,
-                               Price = festivalToAddDto.Price,
-                               Capacity = festivalToAddDto.Capacity,
-                               ShowId = festivalToAddDto.ShowId,
-                               FestivalCategoryId = festivalToAddDto.FestivalCategoryId
-                           }).SingleOrDefaultAsync();
-
-        if (query is not null)
+        var festival = new Festival
         {
-            var result = await _dbContext.Festivals.AddAsync(query);
-            await _dbContext.SaveChangesAsync();
-            return result.Entity;
-        }
-        return null;
+            FestivalId = festivalToAddDto.FestivalId,
+            Title = festivalToAddDto.Title,
+            Description = festivalToAddDto.Description,
+            Date = festivalToAddDto.Date,
+            BannerImageUrl = festivalToAddDto.BannerImageUrl,
+            Genre = festivalToAddDto.Genre,
+            Age = festivalToAddDto.Age,
+            NumberOfDays = festivalToAddDto.NumberOfDays,
+            Location = festivalToAddDto.Location,
+            Price = festivalToAddDto.Price,
+            Capacity = festivalToAddDto.Capacity,
+            ShowId = festivalToAddDto.ShowId,
+            FestivalCategoryId = festivalToAddDto.FestivalCategoryId
+        };
+
+        var result = await _dbContext.Festivals.AddAsync(festival);
+        await _dbContext.SaveChangesAsync();
+        return result.Entity;
     }
 
     public async Task<Festival> Update(int id, FestivalUpdateDto festivalUpdateDto)
@@ -79,27 +74,29 @@ public class FestivalRepository : IFestivalRepository
             festival.Date = festivalUpdateDto.Date;
             festival.Location = festivalUpdateDto.Location;
 
+            var result = _dbContext.Festivals.Update(festival);
             await _dbContext.SaveChangesAsync();
-            return festival;
+            return result.Entity;
         }
-        return null;
+        return default(Festival);
     }
 
     public async Task<Festival> Delete(int id)
     {
         var festival = await _dbContext.Festivals.FindAsync(id);
-        return festival;
+
+        if (festival != null)
+        {
+            var result = _dbContext.Festivals.Remove(festival);
+            await _dbContext.SaveChangesAsync();
+            return result.Entity;
+        }
+        return null;
     }
 
     public async Task<IEnumerable<FestivalCategory>> GetFestivalCategories()
     {
         var festivalCategories = await _dbContext.FestivalCategories.ToListAsync();
         return festivalCategories;
-    }
-
-    public async Task<FestivalCategory> GetFestivalCategory(int id)
-    {
-        var festivalCategory = await _dbContext.FestivalCategories.FindAsync(id);
-        return festivalCategory;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using festifact.models.Dtos.Visitor;
 using festifact.server.Database;
 using festifact.server.Entities;
@@ -31,25 +32,22 @@ public class VisitorRepository : IVisitorRepository
 
     public async Task Add(VisitorToAddDto visitorToAddDto)
     {
-        var visitor = await (from aVisitor in _dbContext.Visitors
-                             where aVisitor.VisitorId == visitorToAddDto.VisitorId
-                             select new Visitor
-                             {
-                                 Firstname = visitorToAddDto.Firstname,
-                                 Lastname = visitorToAddDto.Lastname,
-                                 DateOfBirth = visitorToAddDto.DateOfBirth,
-                                 Sex = visitorToAddDto.Sex,
-                                 Residence = visitorToAddDto.Residence,
-                                 Email = visitorToAddDto.Email,
-                                 Password = visitorToAddDto.Password
-                             }).SingleOrDefaultAsync(); // Execute query, retrieve single row.
-
-        if (visitor is not null)
+        var visitor = new Visitor
         {
-            var result = await _dbContext.Visitors.AddAsync(visitor);
-            await _dbContext.SaveChangesAsync();
-        }
+            VisitorId = visitorToAddDto.VisitorId,
+            Firstname = visitorToAddDto.Firstname,
+            Lastname = visitorToAddDto.Lastname,
+            DateOfBirth = visitorToAddDto.DateOfBirth,
+            Sex = visitorToAddDto.Sex,
+            Residence = visitorToAddDto.Residence,
+            Email = visitorToAddDto.Email,
+            Password = visitorToAddDto.Password
+        };
+
+        var result = await _dbContext.Visitors.AddAsync(visitor);
+        await _dbContext.SaveChangesAsync();
     }
+
 
     public async Task Update(int id, VisitorUpdateDto visitorUpdateDto)
     {
@@ -63,6 +61,7 @@ public class VisitorRepository : IVisitorRepository
             visitor.Email = visitorUpdateDto.Email;
             visitor.Password = visitorUpdateDto.Password;
 
+            _dbContext.Update(visitor);
             await _dbContext.SaveChangesAsync();
         }
     }
@@ -71,7 +70,7 @@ public class VisitorRepository : IVisitorRepository
     {
         var visitor = await _dbContext.Visitors.FindAsync(id);
 
-        if (visitor is not null)
+        if (visitor != null)
         {
             _dbContext.Visitors.Remove(visitor);
             await _dbContext.SaveChangesAsync();

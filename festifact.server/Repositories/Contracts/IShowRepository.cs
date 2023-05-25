@@ -11,10 +11,11 @@ public interface IShowRepository
 
     Task<Show> Get(int id);
 
-    Task<Show> Add(ShowDto showDto);
+    Task<Show> Add(ShowToAddDto showToAddDto);
 
     Task<Show> Update(int id, ShowUpdateDto showUpdateDto);
 
     Task<Show> Delete(int id);
 }
+
 
