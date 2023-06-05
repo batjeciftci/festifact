@@ -3,13 +3,117 @@
     x:Class="festifact.client.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:festifact.client"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:local="clr-namespace:festifact.client.Pages"
+    FlyoutWidth="{OnPlatform MacCatalyst=350, Android=330}"
+    FlyoutBackdrop="{OnPlatform MacCatalyst=LightGray}"
+    Shell.TabBarBackgroundColor="AliceBlue">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <!--FlyoutHeader-->
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout>
+            <BoxView HeightRequest="{OnPlatform MacCatalyst=40, Android=25}" Color="MistyRose" />
+            <BoxView HeightRequest="{OnPlatform MacCatalyst=40, Android=25}" Color="Navy" />
+            <BoxView HeightRequest="{OnPlatform MacCatalyst=40, Android=25}" Color="DarkCyan" />
+            <BoxView HeightRequest="{OnPlatform MacCatalyst=40, Android=25}" Color="SkyBlue" />
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+
+    <!--FlyoutItemLayout-->
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid ColumnSpacing="7">
+                <Grid.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="MacCatalyst">13, 12</On>
+                        <On Platform="Android">13, 15</On>
+                    </OnPlatform>
+                </Grid.Margin>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="{x:OnPlatform MacCatalyst=50, Android=Auto}" />
+                    <ColumnDefinition Width="{x:OnPlatform MacCatalyst=50, Android=Auto}" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="{OnPlatform MacCatalyst=35, Android=25}" />
+                </Grid.RowDefinitions>
+                <Image Grid.Column="0" Grid.Row="0" Source="{Binding Path=Icon}" />
+                <Label Grid.Column="1" Grid.Row="0" Text="{Binding Path=Title}" VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    <!--MenuItemLayout-->
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid ColumnSpacing="7">
+                <Grid.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="MacCatalyst">13, 12</On>
+                        <On Platform="Android">13, 15</On>
+                    </OnPlatform>
+                </Grid.Margin>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="{OnPlatform MacCatalyst=50, Android=Auto}" />
+                    <ColumnDefinition Width="{OnPlatform MacCatalyst=50, Android=Auto}" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="{OnPlatform MacCatalyst=35, Android=25}" />
+                </Grid.RowDefinitions>
+                <Image Grid.Column="0" Grid.Row="0" Source="{Binding Path=Icon}" />
+                <Label Grid.Column="1" Grid.Row="0" Text="{Binding Path=Text}" VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+
+    <!--FlyoutItems-->
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab
+            Title="Home"
+            Icon="house.png">
+
+            <ShellContent
+                Title="Home"
+                ContentTemplate="{x:DataTemplate local:HomePage}" />
+
+            <ShellContent
+                Title="Music Festival"
+                ContentTemplate="{x:DataTemplate local:MusicFestivalPage}" />
+
+            <ShellContent
+                Title="Film Festival"
+                ContentTemplate="{x:DataTemplate local:FilmFestivalPage}" />
+
+            <ShellContent
+                Title="Dance Festival"
+                ContentTemplate="{x:DataTemplate local:DanceFestivalPage}" />
+
+            <ShellContent
+                Title="Literature Festival"
+                ContentTemplate="{x:DataTemplate local:LiteratureFestivalPage}" />
+
+        </Tab>
+
+        <ShellContent
+            Title="Map"
+            Icon="location.png"
+            ContentTemplate="{x:DataTemplate local:MapPage}" />
+
+        <ShellContent
+            Title="Profile"
+            Icon="user.png"
+            ContentTemplate="{x:DataTemplate local:ProfilePage}" />
+
+    </FlyoutItem>
+
+    <!--MenuItems-->
+    <MenuItem
+        Text="Help"
+        IconImageSource="battle.png" />
+
+    <MenuItem
+        Text="About"
+        IconImageSource="feather.png" />
 
 </Shell>
 

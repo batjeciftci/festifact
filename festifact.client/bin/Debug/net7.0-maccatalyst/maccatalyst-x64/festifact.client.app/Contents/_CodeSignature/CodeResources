@@ -116,6 +116,10 @@
 		<data>
 		2Cwf9kxlbq2fDZatB8++waZbhMA=
 		</data>
+		<key>Resources/MauiInfo.plist</key>
+		<data>
+		K/hOMDsXcFw4MGJi96AbKbUfI74=
+		</data>
 		<key>Resources/MonoTouchDebugConfiguration.txt</key>
 		<data>
 		oowkf1sL6T19nanXUObgmuayWqM=
@@ -132,6 +136,18 @@
 		<data>
 		L9cHAOVSlaW2jMaBgy7GlIBZdZg=
 		</data>
+		<key>Resources/battle.png</key>
+		<data>
+		pobCH/N7W1kNebZamF3nyfQUc0c=
+		</data>
+		<key>Resources/battle@2x.png</key>
+		<data>
+		Ncv0Eym5dW1cUoMC237FMojakwM=
+		</data>
+		<key>Resources/battle@3x.png</key>
+		<data>
+		tzkNf+wBqx3xNoFKmwFw3samOYw=
+		</data>
 		<key>Resources/dotnet_bot.png</key>
 		<data>
 		qdYiPSemWrpOK00y89PG6ukhmkA=
@@ -143,6 +159,54 @@
 		<key>Resources/dotnet_bot@3x.png</key>
 		<data>
 		AgG9OaBqGlLlSsDbnE/6b1bb0xU=
+		</data>
+		<key>Resources/feather.png</key>
+		<data>
+		6ZSR7lIzyzzKi3Ia938Kg8voWsI=
+		</data>
+		<key>Resources/feather@2x.png</key>
+		<data>
+		mqBtDtGjG3BZQVcZQvmGc6jBgCU=
+		</data>
+		<key>Resources/feather@3x.png</key>
+		<data>
+		3vkaIY4Ae+HIGCgMXcw3eAYOrMQ=
+		</data>
+		<key>Resources/house.png</key>
+		<data>
+		KwsvwP+ssceRdABH7p0CtJg1v+4=
+		</data>
+		<key>Resources/house@2x.png</key>
+		<data>
+		Ia1rAxQFg6aU5Y6BC13L0NAshI8=
+		</data>
+		<key>Resources/house@3x.png</key>
+		<data>
+		4SxQlm55NcsSFCYSEOAbrRibWCg=
+		</data>
+		<key>Resources/location.png</key>
+		<data>
+		64Loi1mNMOzp6DLSzRrBKIRav+Y=
+		</data>
+		<key>Resources/location@2x.png</key>
+		<data>
+		ww2xXlEM+Bsbay0u/GPMFTBzjqE=
+		</data>
+		<key>Resources/location@3x.png</key>
+		<data>
+		6AoWWYJzDhGI9LzWwFzOXW3fUw8=
+		</data>
+		<key>Resources/user.png</key>
+		<data>
+		1uGeeWP2bYO6Orm6m9DL2qnSyHM=
+		</data>
+		<key>Resources/user@2x.png</key>
+		<data>
+		6r8tm5gZRhhTFuBJWiSzZXWrGnE=
+		</data>
+		<key>Resources/user@3x.png</key>
+		<data>
+		dJOriWPWcrZpHU0k3MCOaOCMNJ8=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -1432,14 +1496,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SVAEj++UNBH0WEJzFEpEhK3ITgzqPpEbsQasnzIZGJk=
+			+knUy4Tk7fuUQGN1hujsfoUSlxYeQmJ9A0Dby38mxas=
 			</data>
 		</dict>
 		<key>MonoBundle/festifact.client.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1Qp0QYHH35WceULXe2x5/18rIi3c6A58morP1U8tS28=
+			XggxPhxMAI7U8Q31IGqhUTRAn/6SIzr0PD/mweCgZ3A=
 			</data>
 		</dict>
 		<key>MonoBundle/icudt.dat</key>
@@ -1708,6 +1772,13 @@
 			G3UPwqpgaaXSHVpemKh3ZXqULoLKX7FiiI2lk+HVl0I=
 			</data>
 		</dict>
+		<key>Resources/MauiInfo.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			i/x+CJBLKHkO3nPxIpXSW/NIcJ9uYA3sH70YTVdtoOE=
+			</data>
+		</dict>
 		<key>Resources/MonoTouchDebugConfiguration.txt</key>
 		<dict>
 			<key>hash2</key>
@@ -1736,6 +1807,27 @@
 			H4w+DqGNITnXOEy4UxkSBph9BjGxHf/ui2zq6lzv5a0=
 			</data>
 		</dict>
+		<key>Resources/battle.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Y20EKiM41+TYJy4P04YSD3Nc0gVxvSJKAeRxQphl/vU=
+			</data>
+		</dict>
+		<key>Resources/battle@2x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5N4UWgFMBgtRUY8evjldBWu7K0WkTTIN6rzhv7aURJA=
+			</data>
+		</dict>
+		<key>Resources/battle@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zhpfAFtDnpoZprfZIMdO2fX2NcGwMT4XlhppASrGyVI=
+			</data>
+		</dict>
 		<key>Resources/dotnet_bot.png</key>
 		<dict>
 			<key>hash2</key>
@@ -1755,6 +1847,90 @@
 			<key>hash2</key>
 			<data>
 			06Dw48r2qORp1zVQzu1FMEqEQpN18taU/bp0JACYc40=
+			</data>
+		</dict>
+		<key>Resources/feather.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2vlf1+pHTCNAaFs9KW7b68rTox9ZVC84kzVusDQb/D0=
+			</data>
+		</dict>
+		<key>Resources/feather@2x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JQTigTPvvOSQKptvF34nvcqFhHgcuaWmwRszSsGoO7E=
+			</data>
+		</dict>
+		<key>Resources/feather@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dq6iX1RurSFjOacOzwqGiOZ7KmVbfQRCpiEqBXOyHFQ=
+			</data>
+		</dict>
+		<key>Resources/house.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+RVxmCfX+cpVmtxcIWKMxiDZE9owbbgebbFgQs2ayk0=
+			</data>
+		</dict>
+		<key>Resources/house@2x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NNEGesd1+Jgqx+2r55ljLWaAhsVHIvhlPxKp/Cff/HU=
+			</data>
+		</dict>
+		<key>Resources/house@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qvKr3zhdDj8lKlL0Ha45wFQ9if6L77uxGTKZ0guuL9k=
+			</data>
+		</dict>
+		<key>Resources/location.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nVmSa3BCOZYhGkS74O4rgfmNUqC04QEFTwW2pQSZrc4=
+			</data>
+		</dict>
+		<key>Resources/location@2x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cJNxITGdA7soguNHL33s1PtwXpqGQn6cwkLpLfkA2ro=
+			</data>
+		</dict>
+		<key>Resources/location@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lE6SaTejaAOpUzwItPZBl/7b1vKURniP+QD3ODM6rjo=
+			</data>
+		</dict>
+		<key>Resources/user.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ro/8KLNhCOlZr+DJKm77xyX7Nlff6F7VG3+106z1oYE=
+			</data>
+		</dict>
+		<key>Resources/user@2x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DtjDsRHWTYFKsqX+zUWzkNacU7KMG/izh3wIYjnuryY=
+			</data>
+		</dict>
+		<key>Resources/user@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GpyeYh6RXF8i/YQwJSq32yioAnoumYYGjm4ChCprmLY=
 			</data>
 		</dict>
 	</dict>

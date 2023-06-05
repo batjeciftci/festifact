@@ -22,11 +22,47 @@ build_metadata.AdditionalFiles.ManifestResourceName = festifact.client.AppShell.
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[/Users/huseyin/festifact/festifact.client/MainPage.xaml]
+[/Users/huseyin/festifact/festifact.client/Pages/DanceFestivalPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = festifact.client.MainPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = festifact.client.Pages.DanceFestivalPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/DanceFestivalPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/DanceFestivalPage.xaml
+
+[/Users/huseyin/festifact/festifact.client/Pages/FilmFestivalPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = festifact.client.Pages.FilmFestivalPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/FilmFestivalPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/FilmFestivalPage.xaml
+
+[/Users/huseyin/festifact/festifact.client/Pages/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = festifact.client.Pages.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/HomePage.xaml
+
+[/Users/huseyin/festifact/festifact.client/Pages/LiteratureFestivalPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = festifact.client.Pages.LiteratureFestivalPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/LiteratureFestivalPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/LiteratureFestivalPage.xaml
+
+[/Users/huseyin/festifact/festifact.client/Pages/MapPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = festifact.client.Pages.MapPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/MapPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/MapPage.xaml
+
+[/Users/huseyin/festifact/festifact.client/Pages/MusicFestivalPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = festifact.client.Pages.MusicFestivalPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/MusicFestivalPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/MusicFestivalPage.xaml
+
+[/Users/huseyin/festifact/festifact.client/Pages/ProfilePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = festifact.client.Pages.ProfilePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/ProfilePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/ProfilePage.xaml
 
 [/Users/huseyin/festifact/festifact.client/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
