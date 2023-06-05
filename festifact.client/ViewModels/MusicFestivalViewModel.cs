@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using festifact.client.Services;
 using festifact.client.Services.Contracts;
 using festifact.models.Dtos.Festival;
 
@@ -17,78 +18,113 @@ public class MusicFestivalViewModel : INotifyPropertyChanged
     private readonly string _bannerImageUrl;
     private string _location;
     private int _price;
-    private Boolean _isRefreshing;
+    private bool _isRefreshing;
     private ObservableCollection<FestivalDto> _festivals;
 
     public string Title
     {
         get => _title;
-        set { _title = value; OnpropertyChanged(); }
+        set { _title = value; OnPropertyChanged(); }
     }
 
     public DateTime Date
     {
         get => _date;
-        set { _date = value; OnpropertyChanged(); }
+        set { _date = value; OnPropertyChanged(); }
     }
 
-    public string BannerImageUrl => _bannerImageUrl;
+    //public string BannerImageUrl => _bannerImageUrl;
 
     public string Location
     {
         get => _location;
-        set { _location = value; OnpropertyChanged(); }
+        set { _location = value; OnPropertyChanged(); }
     }
 
     public int Price
     {
         get => _price;
-        set { _price = value; OnpropertyChanged(); }
+        set { _price = value; OnPropertyChanged(); }
     }
 
-    public bool IsRefreshing
+    public bool IsRefReshing
     {
         get => _isRefreshing;
-        set { _isRefreshing = value; OnpropertyChanged(); }
+        set
+        {
+            if (_isRefreshing != value)
+            {
+                _isRefreshing = value;
+                OnPropertyChanged();
+            }
+        }
     }
 
     public ObservableCollection<FestivalDto> Festivals
     {
         get => _festivals;
+        set
+        {
+            _festivals = value;
+            OnPropertyChanged();
+        }
     }
 
     public event PropertyChangedEventHandler PropertyChanged;
 
-    public ICommand RefreshCommand { get; }
-
-
+    public ICommand RefreshCommand { get; private set; }
 
     public MusicFestivalViewModel(IFestivalService festivalService)
 	{
         this._festivalService = festivalService;
+
         this._festivals = new();
-        RefreshCommand = new Command(RunRefreshCommand);
+
+        RefreshCommand = new Command(async () => await RunRefreshCommand());
+    }
+
+    private async Task RunRefreshCommand()
+    {
+        try
+        {
+            IsRefReshing = true;
+
+            await GetFestivalsByCategory(1);
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Refresh error: {ex.Message}");
+        }
+        finally
+        {
+            IsRefReshing = false;
+        }
     }
 
     private async Task GetFestivalsByCategory(int categoryId)
     {
-        var festivals = await _festivalService.GetFestivalsByCategory(categoryId);
-
-        foreach (var festival in festivals)
+        try
         {
-            _festivals.Add(festival);
+            var festivals = await _festivalService.GetFestivalsByCategory(categoryId);
+
+            Festivals.Clear();
+
+            foreach (var festival in festivals)
+            {
+                Festivals.Add(festival);
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Festivals could not be retrieved, {ex.Message}");
+            await Application.Current.MainPage.DisplayAlert("Error!", ex.Message, "OK");
         }
     }
 
-    private async void RunRefreshCommand()
-    {
-        await GetFestivalsByCategory(1);
-        _isRefreshing = false;
-    }
-
-    private void OnpropertyChanged([CallerMemberName] string propertyName = null)
+    private void OnPropertyChanged([CallerMemberName] string propertyName = null)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(propertyName)));
     }
 }
+
 

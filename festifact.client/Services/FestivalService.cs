@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text.Json;
 using festifact.client.Services.Contracts;
@@ -12,11 +13,10 @@ public class FestivalService : IFestivalService
     private readonly HttpClient _httpClient;
     private JsonSerializerOptions _jsonSerializerOptions;
 
-    public FestivalService(HttpClient httpClient)
+    public FestivalService()
     {
         this._baseAddress = DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5038" : "http://localhost:5038";
-        this._httpClient = httpClient;
-        this._httpClient.BaseAddress = new Uri($"{_baseAddress}");
+        this._httpClient = new HttpClient() { BaseAddress = new Uri($"{_baseAddress}") };
         this._jsonSerializerOptions = new JsonSerializerOptions() { WriteIndented = true, PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
     }
 
@@ -24,7 +24,7 @@ public class FestivalService : IFestivalService
     {
         throw new NotImplementedException();
     }
-
+    
     public Task<FestivalDto> GetFestival(int id)
     {
         throw new NotImplementedException();

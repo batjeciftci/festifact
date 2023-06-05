@@ -49,6 +49,10 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+		<MauiImage Include="Resources\Images\Music\music1.png" />
+		<MauiImage Include="Resources\Images\Music\music2.png" />
+		<MauiImage Include="Resources\Images\Music\music3.png" />
+		<MauiImage Include="Resources\Images\Music\music4.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -68,10 +72,6 @@
 	  <None Remove="Resources\Images\Shows\lFestivalShow1.png" />
 	  <None Remove="Resources\Images\Shows\lFestivalShow2.png" />
 	  <None Remove="Resources\Images\Music\" />
-	  <None Remove="Resources\Images\Music\mFestival1.png" />
-	  <None Remove="Resources\Images\Music\mFestival2.png" />
-	  <None Remove="Resources\Images\Music\mFestival3.png" />
-	  <None Remove="Resources\Images\Music\mFestival4.png" />
 	  <None Remove="Resources\Images\Film\" />
 	  <None Remove="Resources\Images\Dance\" />
 	  <None Remove="Resources\Images\Literature\" />
@@ -97,6 +97,10 @@
 	  <None Remove="Services\" />
 	  <None Remove="ViewModels\" />
 	  <None Remove="Services\Contracts\" />
+	  <None Remove="Resources\Images\Music\music1.png" />
+	  <None Remove="Resources\Images\Music\music2.png" />
+	  <None Remove="Resources\Images\Music\music3.png" />
+	  <None Remove="Resources\Images\Music\music4.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\Shows\mFestivalShow1.png" />
@@ -109,10 +113,6 @@
 	  <BundleResource Include="Resources\Images\Shows\dFestivalShow2.png" />
 	  <BundleResource Include="Resources\Images\Shows\lFestivalShow1.png" />
 	  <BundleResource Include="Resources\Images\Shows\lFestivalShow2.png" />
-	  <BundleResource Include="Resources\Images\Music\mFestival1.png" />
-	  <BundleResource Include="Resources\Images\Music\mFestival2.png" />
-	  <BundleResource Include="Resources\Images\Music\mFestival3.png" />
-	  <BundleResource Include="Resources\Images\Music\mFestival4.png" />
 	  <BundleResource Include="Resources\Images\Film\fFestival1.png" />
 	  <BundleResource Include="Resources\Images\Film\fFestival2.png" />
 	  <BundleResource Include="Resources\Images\Film\fFestival3.png" />
