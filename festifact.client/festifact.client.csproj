@@ -53,6 +53,30 @@
 		<MauiImage Include="Resources\Images\Music\music2.png" />
 		<MauiImage Include="Resources\Images\Music\music3.png" />
 		<MauiImage Include="Resources\Images\Music\music4.png" />
+		<MauiImage Include="Resources\Images\Dance\dance1.png" />
+		<MauiImage Include="Resources\Images\Dance\dance2.png" />
+		<MauiImage Include="Resources\Images\Dance\dance3.png" />
+		<MauiImage Include="Resources\Images\Dance\dance4.png" />
+		<MauiImage Include="Resources\Images\Film\film1.png" />
+		<MauiImage Include="Resources\Images\Film\film2.png" />
+		<MauiImage Include="Resources\Images\Film\film3.png" />
+		<MauiImage Include="Resources\Images\Film\film4.png" />
+		<MauiImage Include="Resources\Images\Literature\literature1.png" />
+		<MauiImage Include="Resources\Images\Literature\literature2.png" />
+		<MauiImage Include="Resources\Images\Literature\literature3.png" />
+		<MauiImage Include="Resources\Images\Literature\literature4.png" />
+		<MauiImage Include="Resources\Images\Shows\danceshow1.png" />
+		<MauiImage Include="Resources\Images\Shows\danceshow2.png" />
+		<MauiImage Include="Resources\Images\Shows\danceshow3.png" />
+		<MauiImage Include="Resources\Images\Shows\filmshow1.png" />
+		<MauiImage Include="Resources\Images\Shows\filmshow2.png" />
+		<MauiImage Include="Resources\Images\Shows\filmshow3.png" />
+		<MauiImage Include="Resources\Images\Shows\literatureshow1.png" />
+		<MauiImage Include="Resources\Images\Shows\literatureshow2.png" />
+		<MauiImage Include="Resources\Images\Shows\literatureshow3.png" />
+		<MauiImage Include="Resources\Images\Shows\musicshow1.png" />
+		<MauiImage Include="Resources\Images\Shows\musicshow2.png" />
+		<MauiImage Include="Resources\Images\Shows\musicshow3.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -61,32 +85,10 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\Shows\" />
-	  <None Remove="Resources\Images\Shows\mFestivalShow1.png" />
-	  <None Remove="Resources\Images\Shows\mFestivalShow2.png" />
-	  <None Remove="Resources\Images\Shows\mFestivalShow3.png" />
-	  <None Remove="Resources\Images\Shows\fFestivalShow1.png" />
-	  <None Remove="Resources\Images\Shows\fFestivalShow2.png" />
-	  <None Remove="Resources\Images\Shows\fFestivalShow3.png" />
-	  <None Remove="Resources\Images\Shows\dFestivalShow1.png" />
-	  <None Remove="Resources\Images\Shows\dFestivalShow2.png" />
-	  <None Remove="Resources\Images\Shows\lFestivalShow1.png" />
-	  <None Remove="Resources\Images\Shows\lFestivalShow2.png" />
 	  <None Remove="Resources\Images\Music\" />
 	  <None Remove="Resources\Images\Film\" />
 	  <None Remove="Resources\Images\Dance\" />
 	  <None Remove="Resources\Images\Literature\" />
-	  <None Remove="Resources\Images\Film\fFestival1.png" />
-	  <None Remove="Resources\Images\Film\fFestival2.png" />
-	  <None Remove="Resources\Images\Film\fFestival3.png" />
-	  <None Remove="Resources\Images\Film\fFestival4.png" />
-	  <None Remove="Resources\Images\Dance\dFestival1.png" />
-	  <None Remove="Resources\Images\Dance\dFestival2.png" />
-	  <None Remove="Resources\Images\Dance\dFestival3.png" />
-	  <None Remove="Resources\Images\Dance\dFestival4.png" />
-	  <None Remove="Resources\Images\Literature\lFestival1.png" />
-	  <None Remove="Resources\Images\Literature\lFestival2.png" />
-	  <None Remove="Resources\Images\Literature\lFestival3.png" />
-	  <None Remove="Resources\Images\Literature\lFestival4.png" />
 	  <None Remove="Platforms\Android\Resources\xml\" />
 	  <None Remove="Pages\" />
 	  <None Remove="Resources\Images\battle.svg" />
@@ -101,30 +103,30 @@
 	  <None Remove="Resources\Images\Music\music2.png" />
 	  <None Remove="Resources\Images\Music\music3.png" />
 	  <None Remove="Resources\Images\Music\music4.png" />
-	</ItemGroup>
-	<ItemGroup>
-	  <BundleResource Include="Resources\Images\Shows\mFestivalShow1.png" />
-	  <BundleResource Include="Resources\Images\Shows\mFestivalShow2.png" />
-	  <BundleResource Include="Resources\Images\Shows\mFestivalShow3.png" />
-	  <BundleResource Include="Resources\Images\Shows\fFestivalShow1.png" />
-	  <BundleResource Include="Resources\Images\Shows\fFestivalShow2.png" />
-	  <BundleResource Include="Resources\Images\Shows\fFestivalShow3.png" />
-	  <BundleResource Include="Resources\Images\Shows\dFestivalShow1.png" />
-	  <BundleResource Include="Resources\Images\Shows\dFestivalShow2.png" />
-	  <BundleResource Include="Resources\Images\Shows\lFestivalShow1.png" />
-	  <BundleResource Include="Resources\Images\Shows\lFestivalShow2.png" />
-	  <BundleResource Include="Resources\Images\Film\fFestival1.png" />
-	  <BundleResource Include="Resources\Images\Film\fFestival2.png" />
-	  <BundleResource Include="Resources\Images\Film\fFestival3.png" />
-	  <BundleResource Include="Resources\Images\Film\fFestival4.png" />
-	  <BundleResource Include="Resources\Images\Dance\dFestival1.png" />
-	  <BundleResource Include="Resources\Images\Dance\dFestival2.png" />
-	  <BundleResource Include="Resources\Images\Dance\dFestival3.png" />
-	  <BundleResource Include="Resources\Images\Dance\dFestival4.png" />
-	  <BundleResource Include="Resources\Images\Literature\lFestival1.png" />
-	  <BundleResource Include="Resources\Images\Literature\lFestival2.png" />
-	  <BundleResource Include="Resources\Images\Literature\lFestival3.png" />
-	  <BundleResource Include="Resources\Images\Literature\lFestival4.png" />
+	  <None Remove="Resources\Images\Film\film1.png" />
+	  <None Remove="Resources\Images\Film\film2.png" />
+	  <None Remove="Resources\Images\Film\film3.png" />
+	  <None Remove="Resources\Images\Film\film4.png" />
+	  <None Remove="Resources\Images\Dance\dance1.png" />
+	  <None Remove="Resources\Images\Dance\dance2.png" />
+	  <None Remove="Resources\Images\Dance\dance3.png" />
+	  <None Remove="Resources\Images\Dance\dance4.png" />
+	  <None Remove="Resources\Images\Literature\literature1.png" />
+	  <None Remove="Resources\Images\Literature\literature2.png" />
+	  <None Remove="Resources\Images\Literature\literature3.png" />
+	  <None Remove="Resources\Images\Literature\literature4.png" />
+	  <None Remove="Resources\Images\Shows\danceshow1.png" />
+	  <None Remove="Resources\Images\Shows\danceshow2.png" />
+	  <None Remove="Resources\Images\Shows\danceshow3.png" />
+	  <None Remove="Resources\Images\Shows\filmshow1.png" />
+	  <None Remove="Resources\Images\Shows\filmshow2.png" />
+	  <None Remove="Resources\Images\Shows\filmshow3.png" />
+	  <None Remove="Resources\Images\Shows\literatureshow1.png" />
+	  <None Remove="Resources\Images\Shows\literatureshow2.png" />
+	  <None Remove="Resources\Images\Shows\literatureshow3.png" />
+	  <None Remove="Resources\Images\Shows\musicshow1.png" />
+	  <None Remove="Resources\Images\Shows\musicshow2.png" />
+	  <None Remove="Resources\Images\Shows\musicshow3.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Resources\Images\Shows\" />

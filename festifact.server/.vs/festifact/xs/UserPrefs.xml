@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="application">
   <MonoDevelop.Ide.Workbench ActiveDocument="../festifact.client/ViewModels/MusicFestivalViewModel.cs">
     <Files>
-      <File FileName="../festifact.client/Pages/MusicFestivalPage.xaml" Line="8" Column="1" />
+      <File FileName="../festifact.client/Pages/MusicFestivalPage.xaml" />
       <File FileName="../festifact.client/ViewModels/MusicFestivalViewModel.cs" Line="130" Column="1" />
     </Files>
     <Pads>
