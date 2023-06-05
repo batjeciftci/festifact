@@ -1496,14 +1496,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+knUy4Tk7fuUQGN1hujsfoUSlxYeQmJ9A0Dby38mxas=
+			/+RJMRdnSbC+pCjcpKSEie5H/15zv141JmEXxwn6oCA=
 			</data>
 		</dict>
 		<key>MonoBundle/festifact.client.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XggxPhxMAI7U8Q31IGqhUTRAn/6SIzr0PD/mweCgZ3A=
+			s5tScmwrkM4mEOJzYvL8R1daInEVNg2BEhLX/o/hezU=
+			</data>
+		</dict>
+		<key>MonoBundle/festifact.models.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GQQQYjZtGB43RbzaRa5XhsskSyyzgGDd2XYhxNKC3Rw=
+			</data>
+		</dict>
+		<key>MonoBundle/festifact.models.pdb</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JaDtdKbZNv3rEidEg3o8wEge6igei7ZxXzpFt+Lq2fc=
 			</data>
 		</dict>
 		<key>MonoBundle/icudt.dat</key>

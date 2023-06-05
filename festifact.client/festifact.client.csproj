@@ -94,6 +94,9 @@
 	  <None Remove="Resources\Images\house.svg" />
 	  <None Remove="Resources\Images\location.svg" />
 	  <None Remove="Resources\Images\user.svg" />
+	  <None Remove="Services\" />
+	  <None Remove="ViewModels\" />
+	  <None Remove="Services\Contracts\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\Shows\mFestivalShow1.png" />
@@ -131,5 +134,11 @@
 	  <Folder Include="Resources\Images\Literature\" />
 	  <Folder Include="Platforms\Android\Resources\xml\" />
 	  <Folder Include="Pages\" />
+	  <Folder Include="Services\" />
+	  <Folder Include="ViewModels\" />
+	  <Folder Include="Services\Contracts\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\festifact.models\festifact.models.csproj" />
 	</ItemGroup>
 </Project>

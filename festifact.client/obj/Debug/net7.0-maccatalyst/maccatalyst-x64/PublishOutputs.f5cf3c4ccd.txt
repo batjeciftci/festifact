@@ -9,6 +9,7 @@
 /Users/huseyin/festifact/festifact.client/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../festifact.client.app/Contents/MonoBundle/Microsoft.Extensions.Options.dll
 /Users/huseyin/festifact/festifact.client/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../festifact.client.app/Contents/MonoBundle/Microsoft.Extensions.Primitives.dll
 /Users/huseyin/festifact/festifact.client/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../festifact.client.app/Contents/MonoBundle/Microsoft.Maui.Graphics.dll
+/Users/huseyin/festifact/festifact.client/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../festifact.client.app/Contents/MonoBundle/festifact.models.dll
 /Users/huseyin/festifact/festifact.client/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../festifact.client.app/Contents/MonoBundle/festifact.client.dll
 /Users/huseyin/festifact/festifact.client/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../festifact.client.app/Contents/MonoBundle/Microsoft.CSharp.dll
 /Users/huseyin/festifact/festifact.client/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../festifact.client.app/Contents/MonoBundle/Microsoft.VisualBasic.Core.dll
@@ -185,6 +186,7 @@
 /Users/huseyin/festifact/festifact.client/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../festifact.client.app/Contents/MonoBundle/Microsoft.Maui.Controls.dll
 /Users/huseyin/festifact/festifact.client/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../festifact.client.app/Contents/MonoBundle/Microsoft.Maui.Essentials.dll
 /Users/huseyin/festifact/festifact.client/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../festifact.client.app/Contents/MonoBundle/festifact.client.pdb
+/Users/huseyin/festifact/festifact.client/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../festifact.client.app/Contents/MonoBundle/festifact.models.pdb
 /Users/huseyin/festifact/festifact.client/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../festifact.client.app/Contents/MonoBundle/libSystem.IO.Compression.Native.dylib
 /Users/huseyin/festifact/festifact.client/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../festifact.client.app/Contents/MonoBundle/libSystem.Native.dylib
 /Users/huseyin/festifact/festifact.client/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../festifact.client.app/Contents/MonoBundle/libSystem.Net.Security.Native.dylib
