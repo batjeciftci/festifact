@@ -1,31 +1,6 @@
 ﻿<Properties StartupConfiguration="application">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../festifact.client/ViewModels/MusicFestivalViewModel.cs">
-    <Files>
-      <File FileName="../festifact.client/Pages/MusicFestivalPage.xaml" />
-      <File FileName="../festifact.client/ViewModels/MusicFestivalViewModel.cs" Line="130" Column="1" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="festifact" expanded="True">
-            <Node name="festifact.client" expanded="True">
-              <Node name="Pages" expanded="True">
-                <Node name="MusicFestivalPage.xaml" expanded="True" />
-              </Node>
-              <Node name="Resources" expanded="True">
-                <Node name="Images" expanded="True" />
-              </Node>
-              <Node name="Services" expanded="True" />
-              <Node name="ViewModels" expanded="True">
-                <Node name="MusicFestivalViewModel.cs" selected="True" />
-              </Node>
-            </Node>
-            <Node name="festifact.server" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.festifact.client PreferredExecutionTarget="MyAppleMacCatalystID" />
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="application" Name="application">
       <Items>
@@ -34,13 +9,30 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.festifact.server PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.46" />
-  <MonoDevelop.Ide.ItemProperties.festifact.client PreferredExecutionTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Option id="ShowAllFiles" value="True" />
+          <Node name="festifact" expanded="True">
+            <Node name="festifact.client" expanded="True">
+              <Node name="Platforms" expanded="True">
+                <Node name="Android" expanded="True">
+                  <Node name="AndroidManifest.xml" selected="True" />
+                </Node>
+                <Node name="MacCatalyst" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.festifact.server PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
