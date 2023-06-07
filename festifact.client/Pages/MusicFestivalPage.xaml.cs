@@ -13,4 +13,16 @@ public partial class MusicFestivalPage : ContentPage
         this._musicFestivalViewModel = musicFestivalViewModel;
         BindingContext = musicFestivalViewModel;
     }
+
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        await _musicFestivalViewModel.GetFestivalsByCategory(1);
+    }
+
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        _musicFestivalViewModel.Festivals.Clear();
+    }
 }

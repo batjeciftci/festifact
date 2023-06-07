@@ -72,7 +72,7 @@ public class MusicFestivalViewModel : INotifyPropertyChanged
 
     public event PropertyChangedEventHandler PropertyChanged;
 
-    public ICommand RefreshCommand { get; private set; }
+    public ICommand RefreshCommand { get; set; }
 
     public MusicFestivalViewModel(IFestivalService festivalService)
 	{
@@ -101,7 +101,7 @@ public class MusicFestivalViewModel : INotifyPropertyChanged
         }
     }
 
-    private async Task GetFestivalsByCategory(int categoryId)
+    public async Task GetFestivalsByCategory(int categoryId)
     {
         try
         {

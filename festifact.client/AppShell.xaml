@@ -6,7 +6,8 @@
     xmlns:local="clr-namespace:festifact.client.Pages"
     FlyoutWidth="{OnPlatform MacCatalyst=350, Android=330}"
     FlyoutBackdrop="{OnPlatform MacCatalyst=LightGray}"
-    Shell.TabBarBackgroundColor="AliceBlue">
+    Shell.TabBarBackgroundColor="AliceBlue"
+    Shell.TabBarIsVisible="{OnPlatform Android=True, MacCatalyst=False}">
 
     <!--FlyoutHeader-->
     <Shell.FlyoutHeader>
@@ -36,8 +37,8 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="{OnPlatform MacCatalyst=35, Android=25}" />
                 </Grid.RowDefinitions>
-                <Image Grid.Column="0" Grid.Row="0" Source="{Binding Path=Icon}" />
-                <Label Grid.Column="1" Grid.Row="0" Text="{Binding Path=Title}" VerticalTextAlignment="Center" />
+                <Image Grid.Column="{OnPlatform Android=0, MacCatalyst=0}" Grid.Row="{OnPlatform Android=0, MacCatalyst=0}" Source="{Binding Path=Icon}" />
+                <Label Grid.Column="{OnPlatform Android=1, MacCatalyst=1}" Grid.Row="{OnPlatform Android=0, MacCatalyst=0}" Text="{Binding Path=Title}" VerticalTextAlignment="Center" />
             </Grid>
         </DataTemplate>
     </Shell.ItemTemplate>
@@ -60,8 +61,8 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="{OnPlatform MacCatalyst=35, Android=25}" />
                 </Grid.RowDefinitions>
-                <Image Grid.Column="0" Grid.Row="0" Source="{Binding Path=Icon}" />
-                <Label Grid.Column="1" Grid.Row="0" Text="{Binding Path=Text}" VerticalTextAlignment="Center" />
+                <Image Grid.Column="{OnPlatform Android=0, MacCatalyst=0}" Grid.Row="{OnPlatform Android=0, MacCatalyst=0}" Source="{Binding Path=Icon}" />
+                <Label Grid.Column="{OnPlatform Android=1, MacCatalyst=1}" Grid.Row="{OnPlatform Android=0, MacCatalyst=0}" Text="{Binding Path=Text}" VerticalTextAlignment="Center" />
             </Grid>
         </DataTemplate>
     </Shell.MenuItemTemplate>
