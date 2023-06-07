@@ -6,33 +6,120 @@
              x:Class="festifact.client.Pages.MusicFestivalPage"
              Title="Music">
 
-    <CollectionView
-        ItemsSource="{Binding Festivals}"
-        EmptyView="no items to display">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="{OnPlatform Android=*, MacCatalyst=*}" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{OnPlatform Android=Auto, MacCatalyst=Auto}" />
+            <RowDefinition Height="{OnPlatform Android=*, MacCatalyst=*}" />
+        </Grid.RowDefinitions>
 
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <Grid Padding="10" ColumnSpacing="7">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <Frame Grid.ColumnSpan="2" Grid.RowSpan="4" BorderColor="LightGray" CornerRadius="10" />
-                    <Image Grid.ColumnSpan="2" Grid.Row="0" Source="music.jpg" />
-                    <BoxView Grid.ColumnSpan="2" Grid.Row="1" HeightRequest="1" Color="LightGray" />
-                    <Label Grid.Column="1" Grid.Row="0" Text="music festival" />
-                    <Label Grid.Column="1" Grid.Row="1" Text="Amsterdam" />
-                    <Label Grid.Column="1" Grid.Row="2" Text="25" />
+        <Frame
+            Grid.Column="{OnPlatform Android=0, MacCatalyst=0}"
+            Grid.Row="{OnPlatform Android=0, MacCatalyst=0}">
+            <Frame.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="Android" Value="15" />
+                    <On Platform="MacCatalyst" Value="50" />
+                </OnPlatform>
+            </Frame.Margin>
+            <Frame.Padding>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="Android" Value="12" />
+                    <On Platform="MacCatalyst" Value="10" />
+                </OnPlatform>
+            </Frame.Padding>
+            <SearchBar HeightRequest="{OnPlatform Android=20, MacCatalyst=20}" Placeholder="Search festivals..." PlaceholderColor="{OnPlatform Android=Gray, MacCatalyst=White}" />
+        </Frame>
 
-                </Grid>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+        <CollectionView
+            Grid.Column="{OnPlatform Android=0, MacCatalyst=0}" Grid.Row="{OnPlatform Android=1, MacCatalyst=1}"
+            ItemsSource="{Binding Festivals}"
+            EmptyView="no festivals to display"
+            VerticalScrollBarVisibility="Always">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout>
+                        <VerticalStackLayout.Margin>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="Android" Value="0, 5" />
+                                <On Platform="MacCatalyst" Value="0, 5" />
+                            </OnPlatform>
+
+                        </VerticalStackLayout.Margin>
+                        <Label Text="{Binding Title}" FontSize="Large" HorizontalTextAlignment="Start">
+                            <Label.Margin>
+                                <OnPlatform x:TypeArguments="Thickness">
+                                    <On Platform="Android" Value="15, 0" />
+                                    <On Platform="MacCatalyst" Value="15, 0" />
+                                </OnPlatform>
+                            </Label.Margin>
+
+                        </Label>
+                        <Frame>
+                            <Frame.Margin>
+                                <OnPlatform x:TypeArguments="Thickness">
+                                    <On Platform="Android" Value="15, 0" />
+                                    <On Platform="MacCatalyst" Value="15, 0" />
+                                </OnPlatform>
+                            </Frame.Margin>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="{OnPlatform Android=200, MacCatalyst=200}" />
+                                    <ColumnDefinition Width="{OnPlatform Android=200, MacCatalyst=200}" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="{OnPlatform Android=150, MacCatalyst=150}" />
+                                    <RowDefinition Height="{OnPlatform Android=Auto, MacCatalyst=Auto}" />
+                                    <RowDefinition Height="{OnPlatform Android=Auto, MacCatalyst=Auto}" />
+                                    <RowDefinition Height="{OnPlatform Android=Auto, MacCatalyst=Auto}" />
+                                    <RowDefinition Height="{OnPlatform Android=Auto, MacCatalyst=Auto}" />
+                                </Grid.RowDefinitions>
+
+                                <Image
+                                    Grid.ColumnSpan="{OnPlatform Android=2, MacCatalyst=2}"
+                                    Grid.Row="{OnPlatform Android=0, MacCatalyst=0}"
+                                    Source="{Binding BannerImageUrl}"
+                                    Aspect="AspectFill" />
+                                <BoxView
+                                    Grid.ColumnSpan="{OnPlatform Android=2, MacCatalyst=2}"
+                                    Grid.Row="{OnPlatform Android=1, MacCatalyst=1}"
+                                    HeightRequest="{OnPlatform Android=2, MacCatalyst=2}" Color="LightGray">
+                                    <BoxView.Margin>
+                                        <OnPlatform x:TypeArguments="Thickness">
+                                            <On Platform="Android" Value="0, 10" />
+                                            <On Platform="MacCatalyst" Value="0, 10" />
+                                        </OnPlatform>
+                                    </BoxView.Margin>
+                                </BoxView>
+
+                                <Label
+                                    Grid.Column="{OnPlatform Android=0, MacCatalyst=0}"
+                                    Grid.Row="{OnPlatform Android=2, MacCatalyst=2}"
+                                    Text="{Binding Date}"
+                                    FontSize="20"
+                                    FontAttributes="Bold" />
+                                <Label
+                                    Grid.Column="{OnPlatform Android=0, MacCatalyst=0}"
+                                    Grid.Row="{OnPlatform Android=3, MacCatalyst=3}"
+                                    Text="{Binding Location}"
+                                    FontSize="{OnPlatform Android=18, MacCatalyst=18}" />
+                                <Label
+                                    Grid.Column="{OnPlatform Android=0, MacCatalyst=0}"
+                                    Grid.Row="{OnPlatform Android=4, MacCatalyst=4}"
+                                    Text="{Binding Price, StringFormat='{0:C2}'}"
+                                    FontSize="{OnPlatform Android=18, MacCatalyst=18}" />
+                            </Grid>
+
+                        </Frame>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
 
 </ContentPage>
+
+

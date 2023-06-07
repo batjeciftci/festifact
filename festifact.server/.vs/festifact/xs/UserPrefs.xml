@@ -1,30 +1,5 @@
-﻿<Properties StartupConfiguration="{F7E29D8F-EAD9-4C50-9D36-11A1FA8C57D0}|Default">
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.46" />
-  <MonoDevelop.Ide.ItemProperties.festifact.client PreferredExecutionTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../festifact.client/ViewModels/MusicFestivalViewModel.cs">
-    <Files>
-      <File FileName="../festifact.client/Pages/MusicFestivalPage.xaml" Line="43" Column="1" />
-      <File FileName="../festifact.client/ViewModels/MusicFestivalViewModel.cs" Line="129" Column="1" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="festifact" expanded="True">
-            <Node name="festifact.client" expanded="True">
-              <Node name="Pages" expanded="True">
-                <Node name="MusicFestivalPage.xaml" expanded="True" selected="True" />
-              </Node>
-              <Node name="Services" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
-            </Node>
-            <Node name="festifact.server" expanded="True">
-              <Node name="Properties" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
+﻿<Properties StartupConfiguration="application">
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="application" Name="application">
       <Items>
@@ -33,10 +8,36 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.festifact.server PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../festifact.client/Pages/MusicFestivalPage.xaml">
+    <Files>
+      <File FileName="../festifact.client/Pages/MusicFestivalPage.xaml" Line="35" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="festifact" expanded="True">
+            <Node name="festifact.client" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="MapPage.xaml" selected="True" />
+                <Node name="MusicFestivalPage.xaml" expanded="True" />
+              </Node>
+              <Node name="Resources" expanded="True">
+                <Node name="Images" expanded="True">
+                  <Node name="Music" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="ViewModels" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.46" />
+  <MonoDevelop.Ide.ItemProperties.festifact.client PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

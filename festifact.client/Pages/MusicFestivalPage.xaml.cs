@@ -7,8 +7,8 @@ public partial class MusicFestivalPage : ContentPage
     private readonly MusicFestivalViewModel _musicFestivalViewModel;
 
     public MusicFestivalPage(MusicFestivalViewModel musicFestivalViewModel)
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
 
         this._musicFestivalViewModel = musicFestivalViewModel;
         BindingContext = musicFestivalViewModel;

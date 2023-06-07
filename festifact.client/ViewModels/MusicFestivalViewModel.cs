@@ -15,7 +15,7 @@ public class MusicFestivalViewModel : INotifyPropertyChanged
     private readonly IFestivalService _festivalService;
     private string _title;
     private DateTime _date;
-    private readonly string _bannerImageUrl;
+    private string _bannerImageUrl;
     private string _location;
     private int _price;
     private bool _isRefreshing;
@@ -33,7 +33,18 @@ public class MusicFestivalViewModel : INotifyPropertyChanged
         set { _date = value; OnPropertyChanged(); }
     }
 
-    //public string BannerImageUrl => _bannerImageUrl;
+    public string BannerImageUrl
+    {
+        get => _bannerImageUrl;
+        set
+        {
+            if (_bannerImageUrl != value)
+            {
+                _bannerImageUrl = value;
+                OnPropertyChanged();
+            }
+        }
+    }
 
     public string Location
     {
@@ -74,6 +85,8 @@ public class MusicFestivalViewModel : INotifyPropertyChanged
 
     public ICommand RefreshCommand { get; set; }
 
+    public ICommand FrameTappedCommand { get; set; }
+
     public MusicFestivalViewModel(IFestivalService festivalService)
 	{
         this._festivalService = festivalService;
@@ -81,6 +94,13 @@ public class MusicFestivalViewModel : INotifyPropertyChanged
         this._festivals = new();
 
         RefreshCommand = new Command(async () => await RunRefreshCommand());
+        FrameTappedCommand = new Command(OnFrameTapped);
+    }
+
+    private void OnFrameTapped()
+    {
+        // Handle the tap event here
+        // Navigate to the details page or perform any desired action
     }
 
     private async Task RunRefreshCommand()
