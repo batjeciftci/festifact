@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text.Json;
@@ -20,29 +21,121 @@ public class FestivalService : IFestivalService
         this._jsonSerializerOptions = new JsonSerializerOptions() { WriteIndented = true, PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
     }
 
-    public Task<IEnumerable<FestivalDto>> GetFestivals()
+    public async Task<IEnumerable<FestivalDto>> GetFestivals()
     {
-        throw new NotImplementedException();
-    }
-    
-    public Task<FestivalDto> GetFestival(int id)
-    {
-        throw new NotImplementedException();
+        try
+        {
+            var responseMessage = await _httpClient.GetAsync("/api/festival");
+
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var responseBody = await responseMessage.Content.ReadAsStringAsync();
+
+                var responseToJson = JsonSerializer.Deserialize<IEnumerable<FestivalDto>>(responseBody, _jsonSerializerOptions);
+
+                return responseToJson;
+            }
+            responseMessage.EnsureSuccessStatusCode();
+        }
+        catch (Exception ex)
+        {
+            throw new HttpRequestException($"Network Error: {ex.Message}");
+        }
+        return Enumerable.Empty<FestivalDto>();
     }
 
-    public Task<FestivalDto> AddFestival(FestivalToAddDto festivalToAddDto)
+    public async Task<FestivalDto> GetFestival(int id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, $"/api/festival/{id}");
+
+            HttpResponseMessage response = await _httpClient.SendAsync(request);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var responseBody = await response.Content.ReadAsStringAsync();
+
+                var responseToJson = JsonSerializer.Deserialize<FestivalDto>(responseBody, _jsonSerializerOptions);
+
+                return responseToJson;
+            }
+            response.EnsureSuccessStatusCode();
+        }
+        catch (Exception ex)
+        {
+            throw new HttpRequestException($"Network Error: {ex.Message}");
+        }
+        return null;
     }
 
-    public Task<FestivalDto> UpdateFestival(FestivalUpdateDto festivalUpdateDto)
+    public async Task<FestivalDto> AddFestival(FestivalToAddDto festivalToAddDto)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var response = await _httpClient.PostAsJsonAsync<FestivalToAddDto>("/api/festival", festivalToAddDto);
+
+            if (response.IsSuccessStatusCode)
+            {
+                if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
+                {
+                    return default(FestivalDto);
+                }
+                return await response.Content.ReadFromJsonAsync<FestivalDto>();
+            }
+            else
+            {
+                var message = await response.Content.ReadAsStringAsync();
+                throw new Exception($"Http status:{response.StatusCode} Message:{message}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Add new festival with id:{festivalToAddDto.FestivalId} failed!, {ex.Message}");
+            throw;
+        }
     }
 
-    public Task<FestivalDto> DeleteFestival(int id)
+    public async Task<FestivalDto> UpdateFestival(FestivalUpdateDto festivalUpdateDto)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var festivalToJson = JsonSerializer.Serialize(festivalUpdateDto);
+
+            var content = new StringContent(festivalToJson, System.Text.Encoding.UTF8, "application/json-patch+json");
+
+            var response = await _httpClient.PatchAsync($"/api/festival/{festivalUpdateDto.FestivalId}", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadFromJsonAsync<FestivalDto>();
+            }
+            return null;
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Update festival with id:{festivalUpdateDto.FestivalId} failed!, {ex.Message}");
+            throw;
+        }
+    }
+
+    public async Task<FestivalDto> DeleteFestival(int id)
+    {
+        try
+        {
+            var response = await _httpClient.DeleteAsync($"/api/festival/{id}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadFromJsonAsync<FestivalDto>();
+            }
+            return default(FestivalDto);
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Remove festival with id:{id} failed!, {ex.Message}");
+            throw;
+        }
     }
 
     public async Task<IEnumerable<FestivalDto>> GetFestivalsByCategory(int categoryId)
@@ -73,9 +166,30 @@ public class FestivalService : IFestivalService
         }
     }
 
-    public Task<IEnumerable<FestivalCategoryDto>> GetFestivalCategories()
+    public async Task<IEnumerable<FestivalCategoryDto>> GetFestivalCategories()
     {
-        throw new NotImplementedException();
+        try
+        {
+            var response = await _httpClient.GetAsync("/api/festival/GetFestivalCategories");
+
+            if (response.IsSuccessStatusCode)
+            {
+                if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
+                {
+                    return Enumerable.Empty<FestivalCategoryDto>();
+                }
+                return await response.Content.ReadFromJsonAsync<IEnumerable<FestivalCategoryDto>>();
+            }
+            else
+            {
+                var message = await response.Content.ReadAsStringAsync();
+                throw new Exception($"Http Status Code:{response.StatusCode} Message:{message}");
+            }
+        }
+        catch (Exception ex)
+        {
+            throw new HttpRequestException($"Network Error: {ex.Message}");
+        }
     }
 }
 

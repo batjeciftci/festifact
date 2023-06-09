@@ -25,9 +25,22 @@ public static class MauiProgram
 
 		// ViewModels
 		builder.Services.AddTransient<MusicFestivalViewModel>();
+		builder.Services.AddTransient<FilmFestivalViewModel>();
+		builder.Services.AddTransient<DanceFestivalViewModel>();
+		builder.Services.AddTransient<LiteratureFestivalViewModel>();
+		builder.Services.AddTransient<HomeViewModel>();
+		builder.Services.AddTransient<HomeDetailsViewModel>();
+
 
 		// Pages
 		builder.Services.AddTransient<MusicFestivalPage>();
+		builder.Services.AddTransient<FilmFestivalPage>();
+		builder.Services.AddTransient<DanceFestivalPage>();
+		builder.Services.AddTransient<LiteratureFestivalPage>();
+		builder.Services.AddTransient<HomePage>();
+		builder.Services.AddTransient<HomeDetailsPage>();
+
+
 
 
 #if DEBUG
