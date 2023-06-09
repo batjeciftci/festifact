@@ -37,4 +37,3 @@ public class HomeDetailsViewModel : INotifyPropertyChanged
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(propertyName)));
     }
 }
-

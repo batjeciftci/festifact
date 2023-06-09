@@ -9,14 +9,15 @@ public partial class FilmFestivalPage : ContentPage
     public FilmFestivalPage(FilmFestivalViewModel viewModel)
 	{
 		InitializeComponent();
+
         this._viewModel = viewModel;
         this.BindingContext = viewModel;
     }
 
-    protected override void OnAppearing()
+    protected override async void OnAppearing()
     {
         base.OnAppearing();
-        _viewModel.GetFestivalsByCategory(2);
+        await _viewModel.GetFestivalsByCategory(2);
     }
 
     protected override void OnDisappearing()

@@ -7,6 +7,12 @@
              Title="Film">
 
     <Grid>
+        <Grid.Margin>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="Android" Value="12, 14" />
+                <On Platform="MacCatalyst" Value="20, 70" />
+            </OnPlatform>
+        </Grid.Margin>
         <CollectionView
             ItemsSource="{Binding Festivals}"
             EmptyView="no festivals to display">
@@ -40,9 +46,7 @@
                                 <Label Grid.Column="{OnPlatform Android=0, MacCatalyst=0}" Grid.Row="{OnPlatform Android=3, MacCatalyst=3}" Text="{Binding Location}" FontSize="{OnPlatform Android=15, MacCatalyst=15}" />
                                 <Label Grid.Column="{OnPlatform Android=2, MacCatalyst=2}" Grid.Row="{OnPlatform Android=4, MacCatalyst=4}" Text="{Binding Price, StringFormat='{0:C2}'}" FontSize="{OnPlatform Android=25, MacCatalyst=25}" HorizontalTextAlignment="End" />
                             </Grid>
-
                         </Frame>
-
                     </VerticalStackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

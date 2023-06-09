@@ -82,17 +82,19 @@ public class HomeViewModel : INotifyPropertyChanged
 
     public event PropertyChangedEventHandler PropertyChanged;
 
-    public ICommand NavigateToHomeDetailsPageCommand { get; set; }
+    public ICommand NavigateToHomeDetailsPageCommand { get; private set; }
 
 
     // CONSTRUCTOR
     public HomeViewModel(IFestivalService festivalService)
-	{
+    {
         this._festivalService = festivalService;
 
         this._festivals = new();
 
         NavigateToHomeDetailsPageCommand = new Command<FestivalDto>(async (festival) => await NavigateToHomeDetailsPage(festival));
+
+        Task.Run(async () => await GetFestivals());
     }
 
     public async Task GetFestivals()

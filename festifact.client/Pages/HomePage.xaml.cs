@@ -13,16 +13,4 @@ public partial class HomePage : ContentPage
         this._viewModel = viewModel;
         this.BindingContext = viewModel;
     }
-
-    protected override async void OnAppearing()
-    {
-        base.OnAppearing();
-        await this._viewModel.GetFestivals();
-    }
-
-    protected override void OnDisappearing()
-    {
-        base.OnDisappearing();
-        this._viewModel.Festivals.Clear();
-    }
 }
