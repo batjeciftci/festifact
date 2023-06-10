@@ -2,8 +2,13 @@
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using Android.Widget;
 using AndroidX.Core.App;
 using AndroidX.Core.Content;
+using Microsoft.Maui.Embedding;
+using festifact.client.Pages;
+using Android.Text.Method;
+using Android.Content;
 
 namespace festifact.client;
 
