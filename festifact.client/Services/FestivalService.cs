@@ -96,6 +96,33 @@ public class FestivalService : IFestivalService
         }
     }
 
+    public async Task<FestivalDto> AddFestival(FestivalDto festivalDto)
+    {
+        try
+        {
+            var response = await _httpClient.PostAsJsonAsync<FestivalDto>("/api/festival", festivalDto);
+
+            if (response.IsSuccessStatusCode)
+            {
+                if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
+                {
+                    return default(FestivalDto);
+                }
+                return await response.Content.ReadFromJsonAsync<FestivalDto>();
+            }
+            else
+            {
+                var message = await response.Content.ReadAsStringAsync();
+                throw new Exception($"Http status:{response.StatusCode} Message:{message}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Add new festival with id:{festivalDto.FestivalId} failed!, {ex.Message}");
+            throw;
+        }
+    }
+
     public async Task<FestivalDto> UpdateFestival(FestivalUpdateDto festivalUpdateDto)
     {
         try

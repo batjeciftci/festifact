@@ -11,6 +11,8 @@ public interface IFestivalService
 
     Task<FestivalDto> AddFestival(FestivalToAddDto festivalToAddDto);
 
+    Task<FestivalDto> AddFestival(FestivalDto festivalDto);
+
     Task<FestivalDto> UpdateFestival(FestivalUpdateDto festivalUpdateDto);
 
     Task<FestivalDto> DeleteFestival(int id);

@@ -105,16 +105,24 @@
             Icon="user.png"
             ContentTemplate="{x:DataTemplate local:ProfilePage}" />
 
+        <ShellContent
+            Title="cart"
+            Icon="cart.png"
+            ContentTemplate="{x:DataTemplate local:ShoppingCartPage}" />
+
     </FlyoutItem>
+
 
     <!--MenuItems-->
     <MenuItem
         Text="Help"
-        IconImageSource="battle.png" />
+        IconImageSource="battle.png"
+        Clicked="MenuItem_Clicked" />
 
     <MenuItem
         Text="About"
-        IconImageSource="feather.png" />
+        IconImageSource="feather.png"
+        Clicked="MenuItem_Clicked_To_Navigate" />
 
 </Shell>
 

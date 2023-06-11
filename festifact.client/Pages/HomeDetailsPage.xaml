@@ -61,7 +61,10 @@
             <Label Text="{Binding FestivalDto.Location, StringFormat='location: {0}'}" FontSize="{OnPlatform Android=25, MacCatalyst=25}" />
             <Label Text="{Binding FestivalDto.Age, StringFormat='Age: {0}'}" FontSize="{OnPlatform Android=18, MacCatalyst=18}" />
 
-            <Button Text="Add to cart">
+            <Button
+                Text="Add to cart"
+                BackgroundColor="Orange"
+                Clicked="Button_Clicked">
                 <Button.Margin>
                     <OnPlatform x:TypeArguments="Thickness">
                         <On Platform="Android" Value="0, 10" />
@@ -69,8 +72,6 @@
                     </OnPlatform>
                 </Button.Margin>
             </Button>
-
-            <Button Text="Go to shoppingcart" BackgroundColor="Orange" />
         </VerticalStackLayout>
 
     </VerticalStackLayout>

@@ -17,12 +17,11 @@ public class ShoppingCartRepository : IShoppingCartRepository
         this._dbContext = dbContext;
     }
 
-    public async Task<IEnumerable<CartItem>> GetItems(int visitorId)
+    public async Task<IEnumerable<CartItem>> GetItems()
     {
         var query = await (from shoppingCart in _dbContext.ShoppingCarts
                            join cartItem in _dbContext.CartItems
                            on shoppingCart.ShoppingCartId equals cartItem.ShoppingCartId
-                           where shoppingCart.VisitorId == visitorId
                            select new CartItem
                            {
                                CartItemId = cartItem.CartItemId,

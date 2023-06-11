@@ -15,9 +15,9 @@ public class ShoppingCartService : IShoppingCartService
         this._repository = repository;
     }
 
-    public async Task<IEnumerable<CartItem>> GetItems(int visitorId)
+    public async Task<IEnumerable<CartItem>> GetItems()
     {
-        var cartItems = await _repository.GetItems(visitorId);
+        var cartItems = await _repository.GetItems();
         return cartItems;
     }
 

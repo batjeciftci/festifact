@@ -24,6 +24,7 @@ public static class MauiProgram
 
         // Services
         builder.Services.AddScoped<IFestivalService, FestivalService>();
+        builder.Services.AddScoped<IShoppingCartService, ShoppingCartService>();
 
         // ViewModels
         builder.Services.AddTransient<MusicFestivalViewModel>();
@@ -32,6 +33,7 @@ public static class MauiProgram
         builder.Services.AddTransient<LiteratureFestivalViewModel>();
         builder.Services.AddTransient<HomeViewModel>();
         builder.Services.AddSingleton<HomeDetailsViewModel>();
+        builder.Services.AddSingleton<ShoppingCartViewModel>();
 
 
 
@@ -43,7 +45,7 @@ public static class MauiProgram
         builder.Services.AddTransient<HomePage>();
         builder.Services.AddTransient<HomeDetailsPage>();
         builder.Services.AddSingleton<ProfilePage>();
-
+        builder.Services.AddSingleton<ShoppingCartPage>();
 
         builder.Services.AddSingleton(new Auth0Client(new()
         {

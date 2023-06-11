@@ -107,6 +107,7 @@
 		<None Remove="Resources\Images\Literature\literature3.jpg" />
 		<None Remove="Resources\Images\Literature\literature4.jpg" />
 		<None Remove="Auth0\" />
+		<None Remove="Resources\Images\cart.svg" />
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="Resources\Images\Shows\" />

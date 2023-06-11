@@ -21,12 +21,11 @@ public class ShoppingCartController : ControllerBase
     }
 
     [HttpGet]
-    [Route("{visitorId}/GetItems")]
-    public async Task<ActionResult<IEnumerable<CartItemDto>>> GetItems(int visitorId)
+    public async Task<ActionResult<IEnumerable<CartItemDto>>> GetItems()
     {
         try
         {
-            var items = await _shoppingCartService.GetItems(visitorId);
+            var items = await _shoppingCartService.GetItems();
 
             if (items == null)
             {
