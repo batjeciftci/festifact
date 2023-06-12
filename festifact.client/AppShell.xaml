@@ -120,9 +120,9 @@
         Clicked="MenuItem_Clicked" />
 
     <MenuItem
-        Text="About"
+        Text="Contacts"
         IconImageSource="feather.png"
-        Clicked="MenuItem_Clicked_To_Navigate" />
+        Clicked="MenuItem_Clicked_1"/>
 
 </Shell>
 
