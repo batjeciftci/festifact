@@ -17,6 +17,7 @@ public class ContactViewModel : INotifyPropertyChanged
     private string _residence;
     private string _email;
     private string _pageTitle;
+    private int _visitorId;
 
     private ObservableCollection<VisitorDto> _visitors;
 
@@ -91,6 +92,16 @@ public class ContactViewModel : INotifyPropertyChanged
         }
     }
 
+    public int VisitorId
+    {
+        get => _visitorId;
+        set
+        {
+            _visitorId = value;
+            OnPropertyChanged();
+        }
+    }
+
     public ObservableCollection<VisitorDto> Visitors
     {
         get => _visitors;
@@ -108,7 +119,7 @@ public class ContactViewModel : INotifyPropertyChanged
     {
         this._visitorService = visitorService;
 
-        Visitors = new ObservableCollection<VisitorDto>();
+        _visitors = new ObservableCollection<VisitorDto>();
 
         PageTitle = "Contacts";
 
@@ -123,7 +134,7 @@ public class ContactViewModel : INotifyPropertyChanged
 
             foreach (var visitor in visitors)
             {
-                Visitors.Add(visitor);
+                _visitors.Add(visitor);
             }
         }
         catch (Exception)
@@ -132,37 +143,37 @@ public class ContactViewModel : INotifyPropertyChanged
         }
     }
 
+    public async Task<VisitorDto> GetVisitor(int id)
+    {
+        var visitor = await _visitorService.GetVisitor(id);
+        return visitor;
+    }
+
+    public async Task AddVisitor(VisitorToAddDto visitorToAddDto)
+    {
+        var visitor = await _visitorService.AddVisitor(visitorToAddDto);
+    }
+
+    public async Task UpdateVisitor(VisitorUpdateDto visitorUpdateDto)
+    {
+        var visitor = await _visitorService.UpdateVisitor(visitorUpdateDto);
+    }
+
+    public async Task DeleteVisitor(int id)
+    {
+        var visitorToDelete = await _visitorService.DeleteVisitor(id);
+    }
+
     public List<VisitorDto> SearchVisitors(string filterText)
     {
-        var visitors = _visitors.Where(v => !string.IsNullOrWhiteSpace(v.Firstname) && v.Firstname.StartsWith(filterText, StringComparison.OrdinalIgnoreCase))?.ToList();
+        var filteredVisitors = (from v in _visitors
+                                where (!string.IsNullOrWhiteSpace(v.Firstname) && v.Firstname.StartsWith(filterText, StringComparison.OrdinalIgnoreCase)) ||
+                                      (!string.IsNullOrWhiteSpace(v.Email) && v.Email.StartsWith(filterText, StringComparison.OrdinalIgnoreCase)) ||
+                                      (!string.IsNullOrWhiteSpace(v.Lastname) && v.Lastname.StartsWith(filterText, StringComparison.OrdinalIgnoreCase)) ||
+                                      (!string.IsNullOrWhiteSpace(v.Residence) && v.Residence.StartsWith(filterText, StringComparison.OrdinalIgnoreCase))
+                                select v).ToList();
 
-        if (visitors == null || visitors.Count <= 0)
-        {
-            visitors = _visitors.Where(v => !string.IsNullOrWhiteSpace(v.Email) && v.Email.StartsWith(filterText, StringComparison.OrdinalIgnoreCase))?.ToList();
-        }
-        else
-        {
-            return visitors;
-        }
-
-        if (visitors == null || visitors.Count <= 0)
-        {
-            visitors = _visitors.Where(v => !string.IsNullOrWhiteSpace(v.Lastname) && v.Lastname.StartsWith(filterText, StringComparison.OrdinalIgnoreCase))?.ToList();
-        }
-        else
-        {
-            return visitors;
-        }
-
-        if (visitors == null || visitors.Count <= 0)
-        {
-            visitors = _visitors.Where(v => !string.IsNullOrWhiteSpace(v.Residence) && v.Residence.StartsWith(filterText, StringComparison.OrdinalIgnoreCase))?.ToList();
-        }
-        else
-        {
-            return visitors;
-        }
-        return visitors;
+        return filteredVisitors;
     }
 
 
@@ -170,6 +181,5 @@ public class ContactViewModel : INotifyPropertyChanged
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(propertyName)));
     }
-
 }
 

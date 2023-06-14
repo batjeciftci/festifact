@@ -2282,16 +2282,6 @@
         "build": {
           "build/netcoreapp3.1/xunit.runner.visualstudio.props": {}
         }
-      },
-      "festifact.client/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/festifact.client.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/festifact.client.dll": {}
-        }
       }
     }
   },
@@ -6853,11 +6843,6 @@
         "xunit.runner.visualstudio.2.4.5.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
-    },
-    "festifact.client/1.0.0": {
-      "type": "project",
-      "path": "../festifact.client/festifact.client.csproj",
-      "msbuildProject": "../festifact.client/festifact.client.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6866,7 +6851,6 @@
       "Mock >= 1.0.0",
       "Moq >= 4.18.4",
       "coverlet.collector >= 6.0.0",
-      "festifact.client >= 1.0.0",
       "xunit >= 2.4.2",
       "xunit.runner.visualstudio >= 2.4.5"
     ]
@@ -6896,11 +6880,7 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {
-            "/Users/huseyin/festifact/festifact.client/festifact.client.csproj": {
-              "projectPath": "/Users/huseyin/festifact/festifact.client/festifact.client.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -6961,16 +6941,5 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project festifact.client is not compatible with net7.0 (.NETCoreApp,Version=v7.0). Project festifact.client supports:\n  - net7.0-android33.0 (.NETCoreApp,Version=v7.0)\n  - net7.0-ios16.1 (.NETCoreApp,Version=v7.0)\n  - net7.0-maccatalyst16.1 (.NETCoreApp,Version=v7.0)",
-      "libraryId": "festifact.client",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    }
-  ]
+  }
 }

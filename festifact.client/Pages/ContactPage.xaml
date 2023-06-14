@@ -25,31 +25,32 @@
         <SearchBar
             Grid.Column="{OnPlatform Android=0, MacCatalyst=0}"
             Grid.Row="{OnPlatform Android=0, MacCatalyst=0}"
+            x:Name="searchBar"
             Placeholder="Search Contact..."
             TextChanged="SearchBar_TextChanged">
         </SearchBar>
 
         <ListView
-            Grid.Column="0"
+            Grid.Column="{OnPlatform Android=0, MacCatalyst=0}"
             Grid.Row="{OnPlatform Android=1, MacCatalyst=1}"
             ItemsSource="{Binding Visitors}"
             x:Name="listContacts"
             BackgroundColor="Transparent"
-            SeparatorColor="Silver"
+            SeparatorColor="Navy"
             RowHeight="{OnPlatform Android=65, MacCatalyst=65}"
             ItemSelected="listContacts_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell
-                        Text=""
-                        Detail="">
+                        Text="{Binding Firstname}"
+                        Detail="{Binding Email}">
                         <TextCell.ContextActions>
                             <MenuItem
                                 Text="Delete"
                                 Clicked="MenuItem_Clicked"
                                 IsDestructive="True"
                                 CommandParameter="{Binding .}">
-                                
+
                             </MenuItem>
                         </TextCell.ContextActions>
                     </TextCell>
@@ -61,9 +62,9 @@
             x:Name="btnAdd"
             Grid.Column="{OnPlatform Android=0, MacCatalyst=0}"
             Grid.Row="{OnPlatform Android=2, MacCatalyst=2}"
+            WidthRequest="{OnPlatform Android=150, MacCatalyst=150}"
             Text="Add Contact"
             Clicked="btnAdd_Clicked" />
-
 
     </Grid>
 

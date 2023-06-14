@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "Oa7xUgynCOsVPfXacjSFQF9Lqeg2qhE+DEC38KFN0EdnaMpygwNN1L4ThvnuchyXrKPM9y3I7tD7bWI18pCwww==",
-  "success": false,
+  "dgSpecHash": "tcofKZM4+I3lkBvWkTxAxSztrQJzHY2AmXIZRPyVfJAk0nA7HZk/8LgggJmhXEcW47idf1EAV3TbSYc1BRdYxQ==",
+  "success": true,
   "projectFilePath": "/Users/huseyin/festifact/festifact.tests/festifact.tests.csproj",
   "expectedPackageFiles": [
     "/Users/huseyin/.nuget/packages/automapper/9.0.0/automapper.9.0.0.nupkg.sha512",
@@ -130,15 +130,5 @@
     "/Users/huseyin/.nuget/packages/xunit.extensibility.execution/2.4.2/xunit.extensibility.execution.2.4.2.nupkg.sha512",
     "/Users/huseyin/.nuget/packages/xunit.runner.visualstudio/2.4.5/xunit.runner.visualstudio.2.4.5.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project festifact.client is not compatible with net7.0 (.NETCoreApp,Version=v7.0). Project festifact.client supports:\n  - net7.0-android33.0 (.NETCoreApp,Version=v7.0)\n  - net7.0-ios16.1 (.NETCoreApp,Version=v7.0)\n  - net7.0-maccatalyst16.1 (.NETCoreApp,Version=v7.0)",
-      "libraryId": "festifact.client",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    }
-  ]
+  "logs": []
 }

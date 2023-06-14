@@ -13,6 +13,8 @@ public partial class AppShell : Shell
 		Routing.RegisterRoute(nameof(ShoppingCartPage), typeof(ShoppingCartPage));
 		Routing.RegisterRoute(nameof(HomePage), typeof(HomePage));
 		Routing.RegisterRoute(nameof(ContactPage), typeof(ContactPage));
+		Routing.RegisterRoute(nameof(AddVisitorPage), typeof(AddVisitorPage));
+		Routing.RegisterRoute(nameof(EditVisitorPage), typeof(EditVisitorPage));
 	}
 
     async void MenuItem_Clicked(System.Object sender, System.EventArgs e)

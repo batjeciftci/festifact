@@ -49,6 +49,8 @@ public static class MauiProgram
         builder.Services.AddSingleton<ProfilePage>();
         builder.Services.AddSingleton<ShoppingCartPage>();
         builder.Services.AddSingleton<ContactPage>();
+        builder.Services.AddSingleton<AddVisitorPage>();
+        builder.Services.AddSingleton<EditVisitorPage>();
 
         builder.Services.AddSingleton(new Auth0Client(new()
         {
