@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:festifact.client.ViewModels"
+             x:DataType="viewmodel:ContactViewModel"
+             x:Class="festifact.client.Pages.ContactPage"
+             Title="{Binding PageTitle}">
+
+    <Grid>
+        <Grid.Padding>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="Android" Value="5" />
+                <On Platform="MacCatalyst" Value="5" />
+            </OnPlatform>
+        </Grid.Padding>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="{OnPlatform Android=*, MacCatalyst=*}" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{OnPlatform Android=50, MacCatalyst=50}" />
+            <RowDefinition Height="{OnPlatform Android=*, MacCatalyst=*}" />
+            <RowDefinition Height="{OnPlatform Android=50, MacCatalyst=50}" />
+        </Grid.RowDefinitions>
+
+        <SearchBar
+            Grid.Column="{OnPlatform Android=0, MacCatalyst=0}"
+            Grid.Row="{OnPlatform Android=0, MacCatalyst=0}"
+            x:Name="searchBar"
+            Placeholder="Search Contact..."
+            TextChanged="SearchBar_TextChanged">
+        </SearchBar>
+
+        <ListView
+            Grid.Column="{OnPlatform Android=0, MacCatalyst=0}"
+            Grid.Row="{OnPlatform Android=1, MacCatalyst=1}"
+            ItemsSource="{Binding Visitors}"
+            x:Name="listContacts"
+            BackgroundColor="Transparent"
+            SeparatorColor="Navy"
+            RowHeight="{OnPlatform Android=65, MacCatalyst=65}"
+            ItemSelected="listContacts_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell
+                        Text="{Binding Firstname}"
+                        Detail="{Binding Email}">
+                        <TextCell.ContextActions>
+                            <MenuItem
+                                Text="Delete"
+                                Clicked="MenuItem_Clicked"
+                                IsDestructive="True"
+                                CommandParameter="{Binding .}">
+
+                            </MenuItem>
+                        </TextCell.ContextActions>
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button
+            x:Name="btnAdd"
+            Grid.Column="{OnPlatform Android=0, MacCatalyst=0}"
+            Grid.Row="{OnPlatform Android=2, MacCatalyst=2}"
+            WidthRequest="{OnPlatform Android=150, MacCatalyst=150}"
+            Text="Add Contact"
+            Clicked="btnAdd_Clicked" />
+
+    </Grid>
+
+</ContentPage>

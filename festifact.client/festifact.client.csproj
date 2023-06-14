@@ -1,27 +1,23 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst;net7.0</TargetFrameworks>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
-		<OutputType>Exe</OutputType>
+		<OutputType Condition="'$(TargetFramework)' != 'net7.0'">Exe</OutputType>
 		<RootNamespace>festifact.client</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
-
 		<!-- Display name -->
 		<ApplicationTitle>festifact.client</ApplicationTitle>
-
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.festifact.client</ApplicationId>
 		<ApplicationIdGuid>a6e14289-e1c0-4c8b-9e78-6c9364e9a317</ApplicationIdGuid>
-
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
-
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
@@ -29,98 +25,129 @@
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
-
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+		<CreatePackage>false</CreatePackage>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	  <WarningLevel>4</WarningLevel>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
 	  <CreatePackage>false</CreatePackage>
 	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
-
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
-
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
 		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
-
+		<MauiImage Update="Resources\Images\battle.svg" BaseSize="32,32" />
+		<MauiImage Update="Resources\Images\feather.svg" BaseSize="32,32" />
+		<MauiImage Update="Resources\Images\house.svg" BaseSize="32,32" />
+		<MauiImage Update="Resources\Images\location.svg" BaseSize="32,32" />
+		<MauiImage Update="Resources\Images\user.svg" BaseSize="32,32" />
+		
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
-
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+		<MauiImage Include="Resources\Images\Music\music.jpg" />
+		<MauiImage Include="Resources\Images\Music\music2.jpg" />
+		<MauiImage Include="Resources\Images\Music\music3.jpg" />
+		<MauiImage Include="Resources\Images\Music\music4.jpg" />
+		<MauiImage Include="Resources\Images\Film\film1.jpg" />
+		<MauiImage Include="Resources\Images\Film\film2.jpg" />
+		<MauiImage Include="Resources\Images\Film\film3.jpg" />
+		<MauiImage Include="Resources\Images\Film\film4.jpg" />
+		<MauiImage Include="Resources\Images\Dance\dance4.jpg" />
+		<MauiImage Include="Resources\Images\Dance\dance1.jpg" />
+		<MauiImage Include="Resources\Images\Dance\dance2.jpg" />
+		<MauiImage Include="Resources\Images\Dance\dance3.jpg" />
+		<MauiImage Include="Resources\Images\Literature\literature1.jpg" />
+		<MauiImage Include="Resources\Images\Literature\literature2.jpg" />
+		<MauiImage Include="Resources\Images\Literature\literature3.jpg" />
+		<MauiImage Include="Resources\Images\Literature\literature4.jpg" />
 	</ItemGroup>
-
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <None Remove="Resources\Images\Shows\" />
-	  <None Remove="Resources\Images\Shows\mFestivalShow1.png" />
-	  <None Remove="Resources\Images\Shows\mFestivalShow2.png" />
-	  <None Remove="Resources\Images\Shows\mFestivalShow3.png" />
-	  <None Remove="Resources\Images\Shows\fFestivalShow1.png" />
-	  <None Remove="Resources\Images\Shows\fFestivalShow2.png" />
-	  <None Remove="Resources\Images\Shows\fFestivalShow3.png" />
-	  <None Remove="Resources\Images\Shows\dFestivalShow1.png" />
-	  <None Remove="Resources\Images\Shows\dFestivalShow2.png" />
-	  <None Remove="Resources\Images\Shows\lFestivalShow1.png" />
-	  <None Remove="Resources\Images\Shows\lFestivalShow2.png" />
-	  <None Remove="Resources\Images\Music\" />
-	  <None Remove="Resources\Images\Music\mFestival1.png" />
-	  <None Remove="Resources\Images\Music\mFestival2.png" />
-	  <None Remove="Resources\Images\Music\mFestival3.png" />
-	  <None Remove="Resources\Images\Music\mFestival4.png" />
-	  <None Remove="Resources\Images\Film\" />
-	  <None Remove="Resources\Images\Dance\" />
-	  <None Remove="Resources\Images\Literature\" />
-	  <None Remove="Resources\Images\Film\fFestival1.png" />
-	  <None Remove="Resources\Images\Film\fFestival2.png" />
-	  <None Remove="Resources\Images\Film\fFestival3.png" />
-	  <None Remove="Resources\Images\Film\fFestival4.png" />
-	  <None Remove="Resources\Images\Dance\dFestival1.png" />
-	  <None Remove="Resources\Images\Dance\dFestival2.png" />
-	  <None Remove="Resources\Images\Dance\dFestival3.png" />
-	  <None Remove="Resources\Images\Dance\dFestival4.png" />
-	  <None Remove="Resources\Images\Literature\lFestival1.png" />
-	  <None Remove="Resources\Images\Literature\lFestival2.png" />
-	  <None Remove="Resources\Images\Literature\lFestival3.png" />
-	  <None Remove="Resources\Images\Literature\lFestival4.png" />
+		<PackageReference Include="Microsoft.Maui.Controls.Maps" Version="7.0.86" />
+		<PackageReference Include="IdentityModel.OidcClient" Version="5.2.1" />
+		<PackageReference Include="Xamarin.Essentials" Version="1.7.5" />
 	</ItemGroup>
 	<ItemGroup>
-	  <BundleResource Include="Resources\Images\Shows\mFestivalShow1.png" />
-	  <BundleResource Include="Resources\Images\Shows\mFestivalShow2.png" />
-	  <BundleResource Include="Resources\Images\Shows\mFestivalShow3.png" />
-	  <BundleResource Include="Resources\Images\Shows\fFestivalShow1.png" />
-	  <BundleResource Include="Resources\Images\Shows\fFestivalShow2.png" />
-	  <BundleResource Include="Resources\Images\Shows\fFestivalShow3.png" />
-	  <BundleResource Include="Resources\Images\Shows\dFestivalShow1.png" />
-	  <BundleResource Include="Resources\Images\Shows\dFestivalShow2.png" />
-	  <BundleResource Include="Resources\Images\Shows\lFestivalShow1.png" />
-	  <BundleResource Include="Resources\Images\Shows\lFestivalShow2.png" />
-	  <BundleResource Include="Resources\Images\Music\mFestival1.png" />
-	  <BundleResource Include="Resources\Images\Music\mFestival2.png" />
-	  <BundleResource Include="Resources\Images\Music\mFestival3.png" />
-	  <BundleResource Include="Resources\Images\Music\mFestival4.png" />
-	  <BundleResource Include="Resources\Images\Film\fFestival1.png" />
-	  <BundleResource Include="Resources\Images\Film\fFestival2.png" />
-	  <BundleResource Include="Resources\Images\Film\fFestival3.png" />
-	  <BundleResource Include="Resources\Images\Film\fFestival4.png" />
-	  <BundleResource Include="Resources\Images\Dance\dFestival1.png" />
-	  <BundleResource Include="Resources\Images\Dance\dFestival2.png" />
-	  <BundleResource Include="Resources\Images\Dance\dFestival3.png" />
-	  <BundleResource Include="Resources\Images\Dance\dFestival4.png" />
-	  <BundleResource Include="Resources\Images\Literature\lFestival1.png" />
-	  <BundleResource Include="Resources\Images\Literature\lFestival2.png" />
-	  <BundleResource Include="Resources\Images\Literature\lFestival3.png" />
-	  <BundleResource Include="Resources\Images\Literature\lFestival4.png" />
+		<None Remove="Resources\Images\Shows\" />
+		<None Remove="Resources\Images\Music\" />
+		<None Remove="Resources\Images\Film\" />
+		<None Remove="Resources\Images\Dance\" />
+		<None Remove="Resources\Images\Literature\" />
+		<None Remove="Platforms\Android\Resources\xml\" />
+		<None Remove="Pages\" />
+		<None Remove="Resources\Images\battle.svg" />
+		<None Remove="Resources\Images\feather.svg" />
+		<None Remove="Resources\Images\house.svg" />
+		<None Remove="Resources\Images\location.svg" />
+		<None Remove="Resources\Images\user.svg" />
+		<None Remove="Services\" />
+		<None Remove="ViewModels\" />
+		<None Remove="Services\Contracts\" />
+		<None Remove="Resources\Images\Music\music.jpg" />
+		<None Remove="Resources\Images\Music\music4.jpg" />
+		<None Remove="Resources\Images\Music\music3.jpg" />
+		<None Remove="Resources\Images\Music\music2.jpg" />
+		<None Remove="Resources\Images\Film\film1.jpg" />
+		<None Remove="Resources\Images\Film\film2.jpg" />
+		<None Remove="Resources\Images\Film\film3.jpg" />
+		<None Remove="Resources\Images\Film\film4.jpg" />
+		<None Remove="Resources\Images\Dance\dance4.jpg" />
+		<None Remove="Resources\Images\Dance\dance1.jpg" />
+		<None Remove="Resources\Images\Dance\dance2.jpg" />
+		<None Remove="Resources\Images\Dance\dance3.jpg" />
+		<None Remove="Resources\Images\Literature\literature2.jpg" />
+		<None Remove="Resources\Images\Literature\literature1.jpg" />
+		<None Remove="Resources\Images\Literature\literature3.jpg" />
+		<None Remove="Resources\Images\Literature\literature4.jpg" />
+		<None Remove="Auth0\" />
+		<None Remove="Resources\Images\cart.svg" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="Resources\Images\Shows\" />
-	  <Folder Include="Resources\Images\Music\" />
-	  <Folder Include="Resources\Images\Film\" />
-	  <Folder Include="Resources\Images\Dance\" />
-	  <Folder Include="Resources\Images\Literature\" />
+		<Folder Include="Resources\Images\Shows\" />
+		<Folder Include="Resources\Images\Music\" />
+		<Folder Include="Resources\Images\Film\" />
+		<Folder Include="Resources\Images\Dance\" />
+		<Folder Include="Resources\Images\Literature\" />
+		<Folder Include="Platforms\Android\Resources\xml\" />
+		<Folder Include="Pages\" />
+		<Folder Include="Services\" />
+		<Folder Include="ViewModels\" />
+		<Folder Include="Services\Contracts\" />
+		<Folder Include="bin\Debug\" />
+		<Folder Include="bin\Debug\" />
+		<Folder Include="bin\Debug\" />
+		<Folder Include="obj\Debug\" />
+		<Folder Include="obj\Debug\" />
+		<Folder Include="obj\Debug\" />
+		<Folder Include="bin\Debug\" />
+		<Folder Include="Auth0\" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\festifact.models\festifact.models.csproj" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-maccatalyst'">
+	  <PackageReference Include="Auth0.OidcClient.iOS" Version="3.3.7" />
+	</ItemGroup>
+	<ItemGroup>
+	  <EmbeddedResource Remove="Resources\Styles\Styles.xaml" />
+	  <EmbeddedResource Remove="Resources\Styles\Colors.xaml" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Styles\Styles.xaml">
+	    <SubType>Designer</SubType>
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </BundleResource>
+	  <BundleResource Include="Resources\Styles\Colors.xaml">
+	    <SubType>Designer</SubType>
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </BundleResource>
 	</ItemGroup>
 </Project>

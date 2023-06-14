@@ -6,7 +6,7 @@ namespace festifact.server.Repositories.Contracts;
 
 public interface IShoppingCartRepository
 {
-    Task<IEnumerable<CartItem>> GetItems(int visitorId);
+    Task<IEnumerable<CartItem>> GetItems();
 
     Task<CartItem> GetItem(int id);
 
