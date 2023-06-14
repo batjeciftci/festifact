@@ -24,4 +24,7 @@
     <Folder Include="Dtos\Film\" />
     <Folder Include="Dtos\Artist\" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.5" />
+  </ItemGroup>
 </Project>

@@ -85,6 +85,7 @@
 /Users/huseyin/festifact/festifact.server/bin/Debug/net7.0/System.Security.Cryptography.ProtectedData.dll
 /Users/huseyin/festifact/festifact.server/bin/Debug/net7.0/System.Security.Permissions.dll
 /Users/huseyin/festifact/festifact.server/bin/Debug/net7.0/System.Windows.Extensions.dll
+/Users/huseyin/festifact/festifact.server/bin/Debug/net7.0/Xamarin.Essentials.dll
 /Users/huseyin/festifact/festifact.server/bin/Debug/net7.0/cs/Microsoft.CodeAnalysis.resources.dll
 /Users/huseyin/festifact/festifact.server/bin/Debug/net7.0/de/Microsoft.CodeAnalysis.resources.dll
 /Users/huseyin/festifact/festifact.server/bin/Debug/net7.0/es/Microsoft.CodeAnalysis.resources.dll

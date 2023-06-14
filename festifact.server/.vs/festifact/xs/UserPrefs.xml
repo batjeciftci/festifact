@@ -1,8 +1,28 @@
-﻿<Properties StartupConfiguration="application">
+﻿<Properties StartupConfiguration="{33E6EA62-7624-4EE2-B93B-8C00DDA6BD98}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="festifact" expanded="True">
+            <Node name="festifact.client" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="festifact" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.festifact.server PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.festifact.tests PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="application" Name="application">
       <Items>
@@ -11,32 +31,5 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.Ide.ItemProperties.festifact.client PreferredExecutionTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../festifact.client/Pages/EditVisitorPage.xaml">
-    <Files>
-      <File FileName="../festifact.client/Pages/EditVisitorPage.xaml.cs" Line="29" Column="39" />
-      <File FileName="../festifact.client/Pages/ContactPage.xaml.cs" Line="41" Column="1" />
-      <File FileName="../festifact.client/ViewModels/ContactViewModel.cs" Line="94" Column="1" />
-      <File FileName="../festifact.client/Pages/EditVisitorPage.xaml" Line="4" Column="73" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="festifact" expanded="True">
-            <Node name="festifact.client" expanded="True">
-              <Node name="Pages" expanded="True">
-                <Node name="ContactPage.xaml" expanded="True" />
-                <Node name="EditVisitorPage.xaml" expanded="True" selected="True" />
-              </Node>
-              <Node name="ViewModels" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.46" />
-  <MonoDevelop.Ide.ItemProperties.festifact.server PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

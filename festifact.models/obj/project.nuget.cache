@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "0+j57iTkoSgvoEAfwc3k252kJMwcr+LXdAtZ98rRRcm7WmiMHcqxR3fO8RrAe4KndCwBeKk3ASzcedkrXQmNFQ==",
+  "dgSpecHash": "JVYnopfE3hnKCOuyHa/4eifiBIjl+28Rlxg9KtPL8ll73ZajEhR9H7A0Mhl++ukRgjZLpPJLfnOOo/arC3XUig==",
   "success": true,
   "projectFilePath": "/Users/huseyin/festifact/festifact.models/festifact.models.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/huseyin/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/huseyin/.nuget/packages/xamarin.essentials/1.7.5/xamarin.essentials.1.7.5.nupkg.sha512"
+  ],
   "logs": []
 }
