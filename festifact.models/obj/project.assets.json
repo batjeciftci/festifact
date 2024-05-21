@@ -126,25 +126,32 @@
     ]
   },
   "packageFolders": {
-    "/Users/huseyin/.nuget/packages/": {}
+    "C:\\Users\\Batuhan\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/huseyin/festifact/festifact.models/festifact.models.csproj",
+      "projectUniqueName": "F:\\projects\\festifact\\festifact.models\\festifact.models.csproj",
       "projectName": "festifact.models",
-      "projectPath": "/Users/huseyin/festifact/festifact.models/festifact.models.csproj",
-      "packagesPath": "/Users/huseyin/.nuget/packages/",
-      "outputPath": "/Users/huseyin/festifact/festifact.models/obj/",
+      "projectPath": "F:\\projects\\festifact\\festifact.models\\festifact.models.csproj",
+      "packagesPath": "C:\\Users\\Batuhan\\.nuget\\packages\\",
+      "outputPath": "F:\\projects\\festifact\\festifact.models\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/huseyin/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Batuhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -157,6 +164,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -184,7 +196,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }

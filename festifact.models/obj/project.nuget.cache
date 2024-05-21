@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "JVYnopfE3hnKCOuyHa/4eifiBIjl+28Rlxg9KtPL8ll73ZajEhR9H7A0Mhl++ukRgjZLpPJLfnOOo/arC3XUig==",
+  "dgSpecHash": "jG0d4w2xCuDb4it+JcrVstfzKnMgeQ1sj0F5rrZejEQb4Jd+4L2b2x6drZUs4PB4phJ0TmMFsGe+sXutiBtVNg==",
   "success": true,
-  "projectFilePath": "/Users/huseyin/festifact/festifact.models/festifact.models.csproj",
+  "projectFilePath": "F:\\projects\\festifact\\festifact.models\\festifact.models.csproj",
   "expectedPackageFiles": [
-    "/Users/huseyin/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
-    "/Users/huseyin/.nuget/packages/xamarin.essentials/1.7.5/xamarin.essentials.1.7.5.nupkg.sha512"
+    "C:\\Users\\Batuhan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Batuhan\\.nuget\\packages\\xamarin.essentials\\1.7.5\\xamarin.essentials.1.7.5.nupkg.sha512"
   ],
   "logs": []
 }
